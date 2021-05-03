@@ -1,0 +1,9 @@
+최댓값을 찾되, 최댓값이 하나라고 확정되지 않았다면, 다음과 같이 조건문을 활용할 수 있다.
+
+max_value = max(first, second, third)
+if max_value == first:
+    array.append(first)
+if max_value == second:
+    array.append(second)
+if max_value == third:
+    array.append(third)
