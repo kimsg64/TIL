@@ -1,0 +1,6 @@
+MediaDevices.getUserMedia()
+ - MediaDevices 인터페이스의 getUserMedia() 메서드는 사용자에게 미디어 입력 장치 사용 권한을 요청하며, 사용자가 수락하면 요청한 미디어 종류의 트랙을 포함한 MediaStream을 Promise로 반환한다.
+ - 매개변수는 video, audio 중 하나 이상을 설정할 수 있다.
+ 
+ ◎ 특정한 요구사항 없이 오디오와 비디오를 둘 다 요청하는 경우
+    { audio: true, video: true }
