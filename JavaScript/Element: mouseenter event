@@ -1,3 +1,2 @@
 Element: mouseenter event
-
-mouseenter 이벤트는 포인터가 처음으로 이벤트 발생 요소 내로 이동할 때 발생한다.
+ - mouseenter 이벤트는 포인터가 처음으로 이벤트 발생 요소 내로 이동할 때 발생한다.
