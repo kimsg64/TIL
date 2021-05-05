@@ -1,0 +1,6 @@
+Datetime Module
+ - datetime 모듈은 날짜와 시간을 조작하는 클래스를 제공한다.
+ - 날짜와 시간 산술이 가능하다.
+
+◎ date 객체
+ - 그레고리력을 기준으로 yyyy-mm-dd를 반환한다.
