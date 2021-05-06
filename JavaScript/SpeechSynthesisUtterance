@@ -1,0 +1,13 @@
+SpeechSynthesisUtterance
+ - 음성 서비스를 요청하며, 읽을 내용과 읽는 방법에 대한 정보를 포함한다.
+
+● properties
+ - lang: 언어
+ - pitch: 음조
+ - rate: 속도
+ - text: 내용
+ - voice: 목소리
+ - volume: 음량
+ 
+● SpeechSynthesis.getVoices()
+ - 현재 장치에서 사용 가능한 모든 voice를 나타내는 SpeechSynthesisVoice 객체 목록을 반환한다.
