@@ -3,7 +3,7 @@ RegExp
  - 정규식을 만드는 방법은 리터럴 방식과 생성자 함수 호출 방식이 있다.
 
 ◎ 생성자 함수 호출 방식
-var regex = new RegExp("string", flag)
+ var regex = new RegExp("string", flag)
 
 ● regex.match()
    - 대응되는 문자열을 찾아 해당 문자열이 속한 배열을 반환한다.
