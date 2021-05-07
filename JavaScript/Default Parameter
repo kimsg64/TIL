@@ -1,0 +1,10 @@
+Default parameter
+ - 기본값 매개변수를 사용하면 값이 없거나 undefined가 전달될 경우, 매개변수를 기본값으로 전달할 수 있다.
+
+◎ 예시와 같이, b의 값이 전달되지 않거나 undefined가 전달되면 b의 기본값인 1이 전달되어 계산된다.
+  function plus(a, b = 1) {
+    return a + b
+  }
+  plus(2, 3)          // 5
+  plus(2)             // 3
+  plus(2, undefined)  // 3
