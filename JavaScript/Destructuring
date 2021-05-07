@@ -1,16 +1,16 @@
 구조 분해 할당(Destructuring)은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 한다.
 
 ◎ 배열 구조 분해
-var arr = [one, two, three];
-var a, b, c = arr;
-// a == one, b == two, c ==three
+  var arr = [one, two, three];
+  var a, b, c = arr;
+  // a == one, b == two, c ==three
 
 ◎ Swap
-var a = 5;
-var b = 10;
-[a, b] = [b, a];
-// a = 10, b = 5
+  var a = 5;
+  var b = 10;
+  [a, b] = [b, a];
+  // a = 10, b = 5
 
 ◎ 객체 구조 분해
-var { offsetX: x, offsetY: y } = e;
-// x == e.offsetX, y == e.offsetY
+  var { offsetX: x, offsetY: y } = e;
+  // x == e.offsetX, y == e.offsetY
