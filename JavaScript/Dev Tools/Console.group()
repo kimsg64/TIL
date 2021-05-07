@@ -1,0 +1,14 @@
+Console.group()
+ - console.groupEnd()와 함께 사용하여 콘솔 창에 그룹을 만든다.
+ 
+◎ 예시와 같이, console.group()과 console.groupEnd() 사이의 내용들이 한 그룹으로 묶인다.
+  console.group();
+  console.log(1);
+  console.group();
+  console.log(2);
+  console.groupEnd();
+  console.groupEnd();
+  // ▼ console.group
+  // | 1
+  // | ▼ console.group
+  // | | 2
