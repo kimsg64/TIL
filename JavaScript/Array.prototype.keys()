@@ -1,0 +1,2 @@
+Array.prototype.keys()
+ - 배열의 각 인덱스를 키 값으로 가지는 Array Iterator 객체를 반환한다.
