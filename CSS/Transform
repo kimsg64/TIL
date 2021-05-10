@@ -1,0 +1,11 @@
+Transform
+ - 요소에 회전(rotate), 크기 조절(scale), 기울이기(skew), 이동(translate) 효과를 부여할 수 있다.
+ 
+● transform: rotate(n)
+ - 요소를 nº 회전시킨다.
+
+● transform: scale(n)
+ - 요소를 n배 크기로 확대 혹은 축소한다.
+
+● transform: translate(x, y)
+ - 요소를 x축 방향으로 x, y축 방향으로 y만큼 이동시킨다.
