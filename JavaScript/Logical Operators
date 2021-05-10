@@ -1,0 +1,4 @@
+Logical Operators
+ - And(&&): a && b 일 때, a가 true인 경우 b를 반환하고, 그렇지 않은 경우 a를 반환한다.
+ - Or(||): a || b 일 때, a가 true인 경우 a를 반환하고, 그렇지 않은 경우 b를 반환한다.
+ - Not(!): !a 일 때, a가 true인 경우 false를 반환하고, 그렇지 않은 경우 true를 반환한다.
