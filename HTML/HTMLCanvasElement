@@ -1,0 +1,5 @@
+HTMLCanvasElement
+ - <canvas> 요소의 레이아웃이나 프레젠테이션을 조작하는 프로퍼티와 메서드를 제공한다.
+ 
+● HTMLCanvasElement.toDataURL()
+  - 파라미터에서 지정하는 포맷(기본 png)의 이미지를 나타내는 data-URL을 반환한다.
