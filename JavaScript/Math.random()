@@ -1,0 +1,8 @@
+Math.random()
+ - 0 이상 1 미만의 구간에서 부동소숫점 의사난수를 반환한다.
+ 
+◎ 두 값 사이의 난수 생성하기
+  Math.random() * (max - min) + min
+  // 0 < Math.random() <= 1
+  // 0 < Math.random() * (max - min) <= max - min
+  // min < Math.random() * (max - min) + min <= max
