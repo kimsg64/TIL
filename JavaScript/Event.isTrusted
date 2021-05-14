@@ -1,0 +1,3 @@
+Event.isTrusted
+ - 이벤트가 사용자 행위에 의해 발생된 경우에 true를 반환한다.
+ - 이벤트가 스크립트로 인해 생성, 수정되었거나, dispatchEvent를 통해 보내진 경우에 false를 반환한다.
