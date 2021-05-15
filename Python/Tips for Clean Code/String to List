@@ -1,0 +1,5 @@
+문자열을 쪼개 각각의 문자를 요소로 가지는 리스트를 만들 수 있다.
+
+string = "hello"
+my_list = list(string)
+// my_list = ["h", "e", "l", "l", "o"]
