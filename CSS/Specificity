@@ -1,0 +1,20 @@
+Specificity
+ - 명시도(Specificity)란, 브라우저가 어떤 요소와 가장 연관성 깊은 속성을 찾는 수단이다.
+ 
+◎ 동일한 요소를 가리키는 둘 이상의 CSS 코드가 충돌하는 경우, 브라우저는 아래와 같은 우선 순위에 따라 스타일을 적용한다.
+ 1. !important
+ 2. inline style attribute(HTML 태그 자체에 작성된 style 속성)
+  - <h1 style="color: #ffffff;"> 등
+ 3. id
+  - #id 등
+ 4. class, attribute, 의사 클래스(Pseudo-classes)
+  - .class, [attributes], :hover 등
+ 5. element, 의사 요소(Pseudo-elements)
+  - div, :before, :after 등
+
+◎ 1, 2는 가능한 사용을 삼가는 것이 좋다.
+
+◎ 3, 4, 5 선택자의 개수와 우선 순위에 가중치를 두어 명시도를 계산하고, 명시도가 높은 스타일을 우선 적용한다.
+ - 3의 가중치는 100, 4의 가중치는 10, 5의 가중치는 1이다.
+
+◎ 명시도가 같은 경우, 가장 마지막에 지정된 스타일을 우선 적용한다.
