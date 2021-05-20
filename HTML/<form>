@@ -1,0 +1,40 @@
+<form> </form>
+ - 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획이다.
+
+● <fieldset> </fieldset>
+ - form 태그를 그룹으로 묶는다.
+ 
+● <legend> </legend>
+ - fieldset 태그의 설명을 나타낸다.
+
+● <select> </select>
+  - 옵션 메뉴를 제공한다.
+
+● <optgroup> </optgroup>
+ - select 옵션들을 묶는다.
+
+● <option>
+ - select의 옵션을 정의한다.
+
+◎ 다음과 같이 사용될 수 있다.
+<formn>
+  <fieldset>
+    <legend>
+      <select>
+        <otpgroup>
+          <option>
+            option1
+          </option>
+          <option>
+            option2
+          </option>
+          <option>
+            option3
+          </option>
+        </otpgroup>
+      </select>
+    </legend>
+  </fieldset>
+</form>
+
+ 
