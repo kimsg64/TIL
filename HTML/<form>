@@ -17,7 +17,7 @@
  - select의 옵션을 정의한다.
 
 ◎ 다음과 같이 사용될 수 있다.
-<formn>
+<for>
   <fieldset>
     <legend>
       <select>
