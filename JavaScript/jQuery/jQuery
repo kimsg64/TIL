@@ -1,0 +1,18 @@
+jQuery
+ - HTML의 사이드 조작을 단순화하도록 설계된 JavaScript Library이다.
+ - jQuery 객체로 생성된다.
+ - jQuery 파일을 다운받거나, CDN의 URL을 script 태그의 src 속성에 연결함으로써 이용할 수 있다.
+ - $ 기호를 통해 jQuery에 접근할 수 있다.
+ - $("CSS Selector").function(); 형식으로 사용할 수 있다.
+
+● CDN(Content Delivery Network)
+ - jQuery.com CDN
+    https://code.jquery.com/
+ - Google CDN
+    https://developers.google.com/speed/libraries/
+ - MS CDN
+    http://ajax.aspnetcdn.com/
+ - CDNJS CDN
+    https://cdnjs.com/libraries/
+ - jsDelivr CDN
+    https://www.jsdelivr.com/
