@@ -1,3 +1,14 @@
 Class
   - 클래스 명은 관습적으로 첫 글자를 대문자로 작성한다.
   - 파일명은 클래스 명과 일치시킨다.
+  - Java에 내장된 클래스는 import하여 사용할 수 있다.
+  - import java.package.Class; 형태로 클래스를 가져온 뒤로 해당 클래스의 메소드를 이용할 수 있다.
+  - import되지 않은 클래스를 사용하려고 하면 에러가 발생한다. (can't find symbol)
+  
+● java.lang 패키지
+  - 컴파일러가 자동으로 import해 주기 때문에 import 없이 사용이 가능하다.
+  - System
+  - String
+  
+● java.util 패키지
+  - Scanner: 콘솔에서 문자, 숫자를 입력받을 수 있는 클래스이다.
