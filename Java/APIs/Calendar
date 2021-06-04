@@ -1,0 +1,39 @@
+Calendar
+  - 날짜 및 시간 정보를 가져오는 클래스이다.
+  - java.util 패키지에 내장되어 있다.
+  
+● getInstance();
+  - Calendar 클래스의 인스턴스를 생성하는 메소드이다.
+  - getInstance 메소드에 new 기능이 포함되어 있다.
+  - getInstance 메소드를 통해 생성한 인스턴스에는 실행되는 시점의 날짜 및 시간 정보가 배열로 담겨 있다.
+  
+● get(Calendar.PROPERTY);
+  - 생성된 객체의 PROPERTY를 가져온다.
+
+● set(Calendar.PROPERTY, value);
+  - 생성된 객체의 PROPERTY의 값을 value로 바꾼다.
+  
+● set(year, month, date, hour, minute, second);
+  - 여러 개의 PROPERTY 값을 한 번에 바꿀 수 있다.
+  
+◎ 현재 날짜 및 시간
+    Calendar now = Calendar.getInstance();
+    int year = now.get(YEAR);
+    int month = now.get(MONTH) + 1;
+    int date = now.get(DAY_OF_MONTH);
+    int day = now.get(DAY_OF_WEEK);
+    int hour = now.get(HOUR_OF_DAY);
+    int minute = now.get(MINUTE);
+    int second = now.get(SECOND);
+    
+◎ 특정 날짜 및 시간 
+    - 2030년
+    now.set(Calendar.YEAR, 2030);
+    - 3월
+    now.set(Calendar.MONTH, 2030);
+    -17일
+    now.set(Calendar.DAY_OF_MONTH, 2030);
+    - 2030년 3월 17일 21시 20분
+    now.set(2030, 2, 17, 21, 20);
+    - 2030년 3월 17일
+    now.set(2030, 2, 17);
