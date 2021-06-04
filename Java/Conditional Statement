@@ -1,0 +1,41 @@
+Conditional Statement
+  - 특정 조건이 참인지 거짓인지에 따라 실행 결과가 달라지도록 제어하는 문장이다.
+  
+● if 조건문
+  if (condition) {
+    ... code ...
+  }
+  - condition은 boolean 값을 가져야 한다. 즉, true or false를 결과로 가져야 한다.
+  - condition이 true일 때 code가 실행된다.
+  
+● if ... else 조건문
+  if (condition) {
+    ... code1 ...
+  } else {
+    ... code2 ...
+  }
+  - condition이 true일 때 code1을 실행하고 code2는 무시한 채 다음 코드로 넘어간다.
+  - condition이 false일 때 code2를 실행한다.
+  
+● if ... else if ... else 조건문
+  if (condition1) {
+    ... code1 ...
+  } else if (condition2) {
+    ... code2 ...
+  } else if (condition3) {
+    ... code3 ...
+  }
+        .
+        .
+        .        
+   else {
+    ... code0 ...
+  }
+  - condition1이 true일 때 code1을 실행한다.
+  - condition1이 false이고 condition2가 true일 때 code2를 실행한다.
+  - condition1, condition2가 false이고 condition3가 true일 때 code3를 실행한다.
+                        .
+                        .
+                        .        
+  - 앞의 모든 조건들이 false일 때 code0을 실행한다.  
+
