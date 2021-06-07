@@ -1,0 +1,3 @@
+Function.prototype.bind()
+  - bind()가 호출되면 새로운 함수를 생성한다.
+  - bind의 첫 번째 인자는 Function의 this가 된다.  
