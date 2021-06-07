@@ -7,7 +7,7 @@ Class
   
 ● java.lang 패키지
   - 컴파일러가 자동으로 import해 주기 때문에 import 없이 사용이 가능하다.
-  - System
+  - System: 운영체제의 일부 기능에 접근할 수 있는 클래스이다.
   - String
   
 ● java.util 패키지
