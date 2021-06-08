@@ -1,7 +1,10 @@
-For Loop
+Loop
   - 조건이 true인 한 블록 안의 실행문을 계속 반복하며, 조건이 false가 되면 실행문을 무시한다.
 
-● for(initialization; condition; final-expression) { statement }
+● for loop
+  for(initialization; condition; final-expression) { 
+    statement;
+  }
   - initialization: 초기값으로 변수를 선언한다. 여기서 선언되는 변수는 주로 카운트에 이용된다.
   - condition: 조건식을 만들어 반복문이 종료될 수 있도록 한다.
   - final-expression: 각 반복의 마지막(statement 종료 후)에 실행되는 부분으로, 주로 카운터 변수의 값을 증감시킨다.
@@ -11,3 +14,14 @@ For Loop
   - for(initialization; condition; ) { statement }
   - for(initialization; ; ) { statement }
   - for( ; ; ) { statement }
+
+● while loop
+  while(condition) { 
+		statement;
+	}
+
+● do...while loop
+  do {
+    statement;
+  } while(condition);
+  - 실행문을 일단 한 번 실행한 뒤 조건을 확인하여 while loop의 실행 여부를 결정한다.
