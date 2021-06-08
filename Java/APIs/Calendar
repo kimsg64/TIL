@@ -18,13 +18,13 @@ Calendar
   
 ◎ 현재 날짜 및 시간
     Calendar now = Calendar.getInstance();
-    int year = now.get(YEAR);
-    int month = now.get(MONTH) + 1;
-    int date = now.get(DAY_OF_MONTH);
-    int day = now.get(DAY_OF_WEEK);
-    int hour = now.get(HOUR_OF_DAY);
-    int minute = now.get(MINUTE);
-    int second = now.get(SECOND);
+    int year = now.get(Calendar.YEAR);
+    int month = now.get(Calendar.MONTH) + 1;
+    int date = now.get(Calendar.DAY_OF_MONTH);
+    int day = now.get(Calendar.DAY_OF_WEEK);
+    int hour = now.get(Calendar.HOUR_OF_DAY);
+    int minute = now.get(Calendar.MINUTE);
+    int second = now.get(Calendar.SECOND);
     
 ◎ 특정 날짜 및 시간 
     - 2030년
