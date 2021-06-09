@@ -4,3 +4,6 @@ System
 ● exit(int)
   - 자바 가상 머신(JVM)을 강제로 종료한다.
   - 매개변수로 정수를 취하는데, 정상적으로 종료할 때는 일반적으로 0을 취한다.
+
+● arraycopy(arrayA, i, arrayB, j, n);
+  - 배열 arrayA의 i번째 인덱스의 요소부터 n개의 요소를 배열 arrayB의 j번째 인덱스로 복사한다.
