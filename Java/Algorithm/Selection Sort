@@ -1,0 +1,10 @@
+Selection Sort(오름차순)
+  - 최솟값을 찾아 가장 앞으로 보낸다.
+  
+◎ a, b, c, d의 대소관계가 b > d > c > a 일 때, array = [a, b, c, d] 배열을 오름차순으로 정렬하는 경우
+  - min = array[0]으로 두고, array[1]~array[3]과 대소비교
+    array[0]가 최솟값이므로 min = array[0] (array = [a, b, c, d])
+  - min = array[1]로 두고, array[2]~array[3]과 대소비교
+    array[2]가 최솟값이므로 min(array[1])과 array[2]를 swap (array = [a, c, b, d])
+  - min = array[2]로 두고, array[3]과 대소비교
+    array[3]이 최솟값이므로 min(array[2])와 array[3]을 swap (array = [a, c, d, b])
