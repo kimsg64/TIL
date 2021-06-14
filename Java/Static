@@ -1,2 +1,12 @@
-Static
-  - Static Class는 새 인스턴스를 생성하지 않고도 사용할 수 있다. 
+Static Variable
+  - 클래스의 모든 인스턴스에서 접근할 수 있는 멤버 변수이다.
+  - static variable이라면 클래스 자체에 속한 변수이므로 인스턴스를 만들지 않고도 Class.variable 형태로 사용이 가능하다.
+  
+  ◎ 예시
+    - C1의 인스턴스 i1, i2가 각각 존재하며, C1의 멤버 변수로 String name = "Kim"이 존재한다.
+    - 이 때, i1.name = "Park"으로 변경하더라도 i2.name의 값은 여전히 "Kim"이다.
+    - C1의 멤버 변수가 static String name = "Kim"이었다면, 같은 상황에서 i1.name = "Park", i2.name = "Park"이 된다.
+    - 또한 C1.name으로 name 값을 가져올 수도 있다.
+
+Static Method
+  - static method라면 클래스 자체에 속한 메소드이므로 인스턴스를 만들지 않고도 Class.method() 형태로 사용이 가능하다.
