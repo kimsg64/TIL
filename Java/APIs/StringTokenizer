@@ -1,0 +1,20 @@
+StringTokenizer
+  - 문자열을 토큰 단위로 나누고 이에 관한 메소드를 제공한다.
+  - 구분자를 기준으로 나뉜 각각의 문자열을 토큰이라고 한다.
+  
+● StringTokenizer(string, "seperator")
+  - 생성자 함수는 문자열과 구분자를 매개변수로 받는다.
+  - 구분자는 복수로 전달할 수 있으며, 하나의 큰따옴표 안에 구분 없이 구분자를 입력하면 된다.
+  - 실제 데이터 값이 없는 데이터는 토큰이 되지 않고 삭제된다.
+
+◎ StringTokenizer("hi-ha, fine", "-,")
+  // "hi", "ha", " fine" 세 개의 토큰을 가진 객체를 반환한다.
+  
+● stringToken.countTokens()
+  - 토큰의 개수를 반환한다.
+
+● hasMoreElements() = hasMoreTokens()
+  - 남은 토큰이 있다면 true를 반환하고, 그렇지 않은 경우 false를 반환한다.
+
+● nextElement() = nextToken();
+  - 다음 토큰을 반환한다.
