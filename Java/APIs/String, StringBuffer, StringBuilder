@@ -1,0 +1,126 @@
+String, StringBuffer, StringBuilder
+  - 세 클래스 모두 문자열과 관련된 메소드를 제공한다.
+  - String은 primitive type 변수와 같은 방식으로 인스턴스를 생성할 수도 있고, new 키워드로 새로운 인스턴스를 생성할 수도 있다. 데이터형이 문자열이 아니라면 new 키워드를 이용해야 한다.
+  - String은 immutable한 반면, StringBuffer, StringBuilder는 mutable하다.
+  - StringBuffer는 동기화 키워드를 지원하기 때문에 멀티 스레드 환경에서 안전하다. (Thread-safe)
+  - StringBuilder는 동기화를 지원하지 않기 때문에 멀티 스레드 환경에서는 적합하지 않으나, 단일 스레드에서의 성능은 StringBuffer보다 뛰어나다.
+  - StringBuffer, StringBuilder는 인스턴스를 생성할 때 매개변수로 정수를 전달하면 해당 크기만큼의 저장 공간을 확보한다.
+  - StringBuffer, StringBuilder는 데이터 변경으로 저장 공간이 부족해지면 자동으로 저장 공간을 확보한다.
+  - StringBuffer, StringBuilder는 String과 달리 데이터를 변경할 때, 메소드를 이용해야 한다.
+
+◎ 데이터 변경
+  - String
+  String txt = "Hello";
+  txt = txt + ", world";
+  이 경우, txt가 참조하는 값은 "Hello, world"가 되지만, 이는 원래 있던 "Hello"에 ", world"가 더해진 것이 아니고, 메모리의 새로운 공간에 "Hello, world"를 저장하고 이를 참조한 것이다.
+  문자열의 변경이 잦은 경우, String을 사용하면 heap 메모리에 많은 garbage가 생성되므로 성능이 저하될 수 있다.
+  
+  - StringBuffer or StringBuilder
+  StringBuffer txt = "Hello";
+  txt = txt + ", world";
+  같은 상황에서, StringBuffer 또는 StringBuilder를 이용해 만든 문자열이라면, txt가 가리키는 주소는 변하지 않은 상태에서, 메모리가 부족하다면 일정량의 메모리를 추가한다.
+  
+◎ 데이터 복사
+  String a = "Hello";
+  String b = a;
+  a = "Hi";
+  이 경우, b는 여전히 "Hello"를 가리키는데, 이는 a와 b가 가리키던 "Hello"의 주소를 b는 여전히 가지고 있으나, a는 다른 공간에 새롭게 만들어진 "Hi"를 가리키기 때문이다.
+  
+● String txt = new String({a, b, c, d}, n, m)
+// "abcd" 반환
+  - new 키워드로 String 인스턴스를 생성하는 경우, 생성자 메소드에 매개변수로 문자를 배열로 전달하면 문자들을 문자열로 반환한다.
+  - 매개변수 n, m을 전달하면 n 이상 m 미만의 인덱스만을 문자열로 반환한다.
+
+● String txt = new String({65, 66, 67, 68}, n, m)
+  - new 키워드로 String 인스턴스를 생성하는 경우, 생성자 메소드에 매개변수로 숫자를 배열로 전달하면 숫자들을 아스키 코드에 맞는 문자열로 반환한다.
+  - 매개변수 n, m을 전달하면 n 이상 m 미만의 인덱스만을 문자열로 반환한다.
+  
+● string1.equals(string2)
+  - 두 문자열의 데이터 값이 일치하는 경우 true, 일치하지 않는 경우 false를 반환한다.
+  
+● string.charAt(index)
+  - 해당 문자열에서 매개변수로 전달된 인덱스에 위치한 값을 반환한다.
+  
+● string1.concat(string2)
+  - string1의 뒤에 string2를 연결한다.
+
+● string1.equalsIgnoreCase(string2)
+  - string1과 string2의 데이터 값을 대소문자 없이 비교하여 일치하는 경우 true, 일치하지 않는 경우 false를 반환한다.
+
+● string.getBytes()
+  - 문자열을 Byte code의 배열로 변환한다.
+  - 통신에서는 문자열 대신 Byte code의 전송이 이루어지므로 통신에서 주로 이용된다.
+  
+● string.indexOf('c')
+  - 해당 문자열에서 매개변수로 전달된 문자의 첫 번째 인덱스를 찾아 반환하며, 문자열 내에 문자가 존재하지 않는 경우 -1을 반환한다.
+
+● string.indexOf('c', n)
+  - 해당 문자열에서 인덱스가 n 이상인 문자를 대상으로 매개변수로 전달된 문자의 첫 번째 인덱스를 찾아 반환한다.
+
+● string.lastIndexOf('c')
+  - 해당 문자열의 마지막 인덱스에서 시작해 역순으로 조사하여 매개변수로 전달된 문자의 첫 번째 인덱스를 찾아 반환한다.
+
+● string.length()
+  - 해당 문자열의 길이를 반환한다.
+
+● string.replaceAll(before, after)
+  - 해당 문자열에서 before 문자열이 존재하면 모두 after 문자열로 바꾼 새로운 배열을 반환한다.
+  - 원본 배열은 그대로 유지된다.
+
+● string.split(seperator)
+  - 문자열을 구분자를 기준으로 나누어 그 값들을 요소로 하는 하나의 배열을 반환한다.
+
+● string.substring(n, m)
+  - 전체 문자열 중 인덱스가 n 이상 m 미만인 문자열을 반환하며, m을 전달하지 않으면 문자열의 끝까지 반환한다.
+
+● string.toCharArray() 
+  - 문자열을 문자로 쪼개고 이를 배열로 반환한다.
+
+● string.toLowerCase()
+  - 문자열의 모든 문자를 소문자로 변환한다.
+
+● string.toUpperCase()
+  - 문자열의 모든 문자를 대문자로 변환한다.
+
+● string.trim()
+  - 문자열 양 끝의 공백 문자를 제거한다.
+
+● string.valueOf(data)
+  - 다른 데이터형을 문자열로 변환한 값을 반환한다.
+
+● string1.compareTo(string2)
+  - 두 문자열을 사전식으로 비교한다. 즉, 두 문자열에서 같은 인덱스끼리만 대소를 비교한다.
+  - string1에서 string2를 뺀 int 값을 반환한다.
+
+● string1.compareToIgnoreCase(string2)
+  - 두 문자열을 사전식으로 비교하되, 대소문자의 구별 없이 비교한다.
+
+● stringBuffer.append(data)
+  stringBuilder.append(data)
+  - 매개변수로 주어진 데이터를 문자열로 변환하여 해당 문자열의 뒤에 더한다.
+
+● stringBuffer.insert(index, data)
+  stringBuilder.insert(index, data)
+  - 매개변수로 주어진 데이터를 문자열로 변환하여 해당 문자열의 index 위치에 삽입한다.
+  
+● stringBuffer.deleteCharAt(index)
+  stringBuilder.deleteCharAt(index)
+  - 해당 인덱스의 문자열을 삭제한다.
+  
+● stringBuffer.delete(index1, index2)
+  stringBuilder.delete(index, index2)
+  - index1 이상, index2 미만의 문자열을 삭제한다.
+  
+● stringBuffer.replace(index1, index2, replacement)
+  stringBuilder.replace(index1, index2, replacement)
+  - index1 이상, index2 미만의 문자열을 replacement로 치환한다.
+  
+● stringBuffer.reverse()
+  stringBuilder.reverse()
+  - 문자열을 거꾸로 출력한다.
+  
+  
+  
+  
+  
+  
