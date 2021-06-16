@@ -11,3 +11,6 @@ Arrays
 
 ● Arrays.toString(array)
   - 배열을 문자열로 변환한다.
+
+● Arrays.copyOfRange(array, n, m)
+  - 배열의 n 이상, m 미만의 인덱스만을 복사하여 반환한다.
