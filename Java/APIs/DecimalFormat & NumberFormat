@@ -1,0 +1,22 @@
+DecimalFormat
+  - java.text 패키지의 클래스로, 십진수의 출력 형식을 지정할 수 있는 클래스이다.
+  - 인스턴스를 생성할 때 매개변수로 패턴을 전달하면 해당 패턴이 담긴 객체를 생성한다.
+  - 생성된 객체의 부모 클래스인 NumberFormat 클래스에서 상속받은 format() 메소드를 이용해 매개변수로 숫자 데이터를 전달하면 패턴이 적용된 String 데이터를 반환한다.
+NumberFormat
+  - java.text 패키지의 클래스로, DecimalFormat의 부모 클래스이다.
+
+● format(x)
+  - 매개변수로 숫자 데이터를 전달받으면 특정 패턴을 적용한 String 타입으로 변환하여 반환한다.
+  
+● parse(x)
+  - 매개변수로 패턴이 적용된 String 데이터를 전달받으면 Number 객체를 반환한다.
+  - Number 객체에 다시 intValue() 메소드를 사용하면 데이터를 정수로 전달받을 수 있다.
+  
+◎ 예시
+  amount = 1000000
+  DecimalFormat changeCurrency = new DecimalFormat("#,###원");
+  String koreanCurrency = changeCurrency.format(amount);
+  // koreanCurrency는 "1,000,000원"을 데이터 값으로 가지는 String 데이터가 된다.
+  NumberFormat changeNumber = new NumberFormat.getInstance();
+  Number number = changeNumber.parse(koreanCurrency);
+  int amountAgain = number.intValue();
