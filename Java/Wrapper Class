@@ -1,0 +1,13 @@
+Wrapper Class
+  - Primitive type의 데이터를 객체로 만드는 클래스이다.
+  - 각각의 타입 명을 클래스 명으로 가지고 있다. (Boolean, Byte, Character, Double, Float, Integer, Short, Long)
+  - 자바의 새로운 버전에서는 autoboxing 및 autounboxing을 지원하므로, 해당 클래스의 인스턴스를 만들지 않아도 된다.
+  
+◎ 예시
+  int a = 1;
+  Integer i = Integer.valueOf(a);
+  // i는 Wrapper Class인 Integer를 통해 객체화된 a이다.
+  int x = i;
+  // i는 객체이나 autounboxing을 통해 primitive type인 int x에 대입될 수 있다.
+  Integer y = a;
+  // a는 primitive type이나 autoboxing을 통해 Integer type인 y에 대입될 수 있다.
