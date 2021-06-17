@@ -1,0 +1,25 @@
+Abstract Class
+  - 클래스 내부에 Abstract method가 하나라도 존재한다면 해당 클래스는 추상 클래스로 정의되어야 한다.
+  - 추상 메소드는 중괄호로 감싸진 실행부가 없는 메소드로, 메소드 이름만 설정해 두고, 별도로 필요한 기능을 구현할 수 있게 해 주는 것으로, 협업 시에 주로 사용된다.
+  - 추상 클래스는 이를 상속하는 자식 클래스를 만들어 사용하며, 클래스 내의 모든 추상 메소드를 오버라이딩해야 한다.
+
+◎ 예시
+    public abstract class Class1 {
+      public Class1() {
+      }  
+      public abstract void method1();
+      public abstract void method2(int num);
+    }
+    
+  - 위 추상 클래스를 이용하려면 
+    public class Class2 extends Class1 {
+      public Class2() {
+      }
+      public void method1() {
+        . . . Statement. . .
+      }
+      public void method2(int num) {
+        . . . Statement. . .
+      }
+    }
+    위와 같이 상속한 뒤, 모든 추상 메소드를 오버라이딩해야 한다.
