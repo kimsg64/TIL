@@ -1,0 +1,19 @@
+Interface
+  - 내부에 Abstract Method, Static Final Variables만 존재하는 클래스이다.
+  - absctract method가 포함되어 있으므로 상속 및 오버라이딩을 통해 이용할 수 있다.
+  - 클래스에서 인터페이스를 상속할 때는 implements 키워드를 이용하고, 여러 개의 인터페이스를 상속받을 수 있으며, 클래스와 인터페이스를 함께 상속받을 수도 있다.
+  - 인터페이스에서 인터페이스를 상속할 때는 extends 키워드를 이용하고, 하나의 인터페이스만 상속받을 수 있다.
+  - 상위 인터페이스로 하위 클래스의 인스턴스를 만들 수 있다.
+
+◎ 예시
+    public interface Interface1 extends Interface2 {
+      public static final VARIABLE = 100;
+      public abstract void methodName();
+    }
+    // 인터페이스는 위와 같이 상수의 선언, 추상 메소드의 선언만 가능하며, 인터페이스 하나를 extends를 통해 상속할 수 있다.
+    
+    public class Class1 implements Interface1, Interface2 {
+       public void methodName() {
+       };
+    }
+    // 클래스로 인터페이스를 상속할 때는 implements를 사용하며, 복수의 인터페이스를 상속할 수 있다. 추상 메소드를 오버라이딩할 필요가 있다.
