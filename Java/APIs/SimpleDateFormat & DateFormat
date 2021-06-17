@@ -1,0 +1,13 @@
+SimpleDateFormat
+  - java.text 패키지의 클래스로, 날짜의 출력 형식을 지정할 수 있는 클래스이다.
+  - 인스턴스를 생성할 때 매개변수로 패턴을 전달하면 해당 패턴이 담긴 객체를 생성한다.
+  - 생성된 객체의 부모 클래스인 DateFormat의 format() 메소드를 이용하면 Date 객체로부터 String을 반환받을 수 있다.
+  
+◎ 예시
+  Calendar now = Calendar.getInstance();
+  Date nowDate = now.getTime();
+  // Calendar 클래스로부터 현재 시간에 대한 Date 객체를 구했다.
+  
+  SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-M-dd-E hh:mm");
+  String patternedDate = dateFormat.format(nowDate);
+  // patternedDate에는 현재 시간이 입력한 패턴과 같은 형태의 String 데이터가 할당된다.
