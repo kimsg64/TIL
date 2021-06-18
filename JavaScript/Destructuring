@@ -14,3 +14,9 @@
 ◎ 객체 구조 분해
   var { offsetX: x, offsetY: y } = e;
   // x == e.offsetX, y == e.offsetY
+
+  const { name } = this.state;
+  // { name } = this.state
+  const { name, age } = this.state;
+  // { name } = this.state
+  // { age } = this.state
