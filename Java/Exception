@@ -55,6 +55,7 @@ Exception
   - Exception 클래스를 상속하면 사용자 정의 예외를 만들 수 있다.
   - 사용자 정의 예외 클래스의 생성자 메소드의 내용을 super(message)로 지정하면, 부모 클래스인 Exception에 message를 전달하고, Exception에서 이를 매개변수로 하는 생성자 메소드를 실행하게 된다.
   - 예외로 만들고 싶은 상황에서 throw new UserException()을 실행하면 사용자가 정의한 UserException 클래스를 통해 Exception 클래스로 에러가 넘어간다.
+  - throw를 통해 넘긴 에러는 반드시 try...catch나 throws를 통해 처리해야 한다.
 
 ● ArithmeticException
   - 어떤 수를 0으로 나누었을 때 발생하는 에러이다.
