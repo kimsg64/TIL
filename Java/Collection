@@ -32,18 +32,19 @@ Collection
 ● Methods
   - 대체로 공통적으로 사용할 수 있는 메소드들이다. 컬렉션의 종류에 따라 사용하지 못하는 경우도 있다.
   - add(E): 컬렉션에 순서대로 데이터를 추가한다.
-	- addElement(E): 컬렉션에 순서대로 데이터를 추가하되, 컬렉션의 크기를 하나 키운다.
-	- add(index, E): 원하는 인덱스에 데이터를 추가하고, 원래 있던 데이터들은 한 칸씩 뒤로 미룬다.
-	- clear(): 컬렉션을 비운다.
-	- clone(): 컬렉션을 복제한다.
-	- firstElement(): 컬렉션의 첫 번째 엘리먼트(index 0)를 가져온다.
-	- isEmpty(): 컬렉션이 비어있는지를 확인한다.
-	- insertElement(E, index): 컬렉션에 해당 위치에 요소를 추가한다.
-	- lastElement(): 컬렉션의 마지막 요소를 반환한다.
-	- remove(index): 컬렉션에서 해당 위치의 요소를 삭제한다.
-	- remove(E): 컬렉션에서 해당 요소를 삭제한다.
-	- removeElement(E): 컬렉션에서 해당 요소를 삭제한다.
-	- removeElementAt(index): 컬렉션에서 해당 위치의 요소를 삭제한다.
-	- removeRange(n, m): 컬렉션의 요소 중 인덱스 n 이상 m 미만의 요소를 삭제한다.
-	- toArray(): 컬렉션을 배열로 만들어 반환한다.
-	- toString(): 컬렉션을 문자열로 만들어 반환한다.
+  - addElement(E): 컬렉션에 순서대로 데이터를 추가하되, 컬렉션의 크기를 하나 키운다.
+  - add(index, E): 원하는 인덱스에 데이터를 추가하고, 원래 있던 데이터들은 한 칸씩 뒤로 미룬다.
+  - clear(): 컬렉션을 비운다.
+  - clone(): 컬렉션을 복제한다.
+  - firstElement(): 컬렉션의 첫 번째 엘리먼트(index 0)를 가져온다.
+  - isEmpty(): 컬렉션이 비어있는지를 확인한다.
+  - insertElement(E, index): 컬렉션에 해당 위치에 요소를 추가한다.
+  - lastElement(): 컬렉션의 마지막 요소를 반환한다.
+  - remove(index): 컬렉션에서 해당 위치의 요소를 삭제한다.
+  - remove(E): 컬렉션에서 해당 요소를 삭제한다.
+  - removeElement(E): 컬렉션에서 해당 요소를 삭제한다.
+  - removeElementAt(index): 컬렉션에서 해당 위치의 요소를 삭제한다.
+  - removeRange(n, m): 컬렉션의 요소 중 인덱스 n 이상 m 미만의 요소를 삭제한다.
+  - toArray(): 컬렉션을 배열로 만들어 반환한다.
+  - toString(): 컬렉션을 문자열로 만들어 반환한다.
+  - size(): 컬렉션의 길이를 반환한다.
