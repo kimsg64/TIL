@@ -60,6 +60,7 @@ Collection
     ■ 트리 구조를 기반으로 하며, Key를 기준으로 오름차순으로 정렬한다.
   - Properties
     ■ key와 value가 모두 String 타입인 자료형이다.
+    ■ Generic을 설정할 수 없다.
   
 ● Methods(Map)
   - put(key, value): key, value 형태로 한 쌍의 데이터를 컬렉션에 추가한다.
