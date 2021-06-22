@@ -58,8 +58,15 @@ Collection
     ■ Hashtable의 업그레이드 버전으로, Hashtable은 거의 사용되지 않는다.
   - TreeMap
     ■ 트리 구조를 기반으로 하며, Key를 기준으로 오름차순으로 정렬한다.
+  - Properties
+    ■ key와 value가 모두 String 타입인 자료형이다.
   
 ● Methods(Map)
   - put(key, value): key, value 형태로 한 쌍의 데이터를 컬렉션에 추가한다.
   - keySet(): 컬렉션의 모든 key를 모아 하나의 Set 자료로 반환한다.
   - values(): 컬렉션의 모든 value를 모아 하나의 Collection 자료로 반환한다.
+  
+● Methods(Properties)
+  - setProperty(key, value): key, value 형태로 한 쌍의 데이터를 컬렉션에 추가한다.
+  - getProperty(key): key에 해당하는 value 데이터를 반환한다. 
+  - propertyNames(): Properties의 모든 key를 하나의 Enumeration 객체로 반환한다.
