@@ -1,0 +1,11 @@
+Iterator & Enumeration
+  - Iterator는 List, Set 계열 컬렉션에 속한 클래스로, 자료에 순차적으로 접근할 때 이용한다.
+  - Collection.iterator() 키워드를 통해 해당 컬렉션을 Iterator 객체로 변환하여 사용할 수 있다.
+  - Enumeration는 Iterator와 비슷한 기능을 수행하므로 대부분의 경우 Iterator을 사용하는 것이 편리하다.
+
+● hasNext() 
+  - Iterator 객체의 다음 요소가 있는지를 체크하여 있다면 true를 반환한다.
+  - Enumeration 객체에서는 hasMoreElements() 메소드가 같은 역할을 수행한다.
+● next() 
+  - Iterator 객체의 다음 요소를 반환한다.
+  - Enumeration 객체에서는 nextElement() 메소드가 같은 역할을 수행한다.
