@@ -1,2 +1,38 @@
 ● Button
   - 클릭에 반응하는 버튼을 생성할 수 있다.
+
+● JButton
+  - 클릭에 반응하는 버튼을 생성할 수 있다.
+  - setPressedIcon(Image): 버튼이 눌릴 때 버튼의 아이콘을 바꾼다.
+  - setRolloverIcon(Image): 마우스를 버튼에 올려 놓으면 버튼의 아이콘을 바꾼다.
+  - setEnabled(Boolean): true일 때 버튼을 활성화하고, false일 때 버튼을 비활성화한다.
+  
+● radioButton
+  - 여러개 중 하나를 선택할 수 있는 버튼을 생성할 수 있다.
+  - ButtonGroup에 소속되면 그룹 구성원들 중 하나의 버튼을 선택했을 때, 기존에 선택되었던 버튼의 선택이 풀린다.
+
+● JToggleButton
+  - 클릭에 반응해 상태가 바뀌는 버튼을 생성할 수 있다.
+
+● JPanel
+  - 테두리와 타이틀 바가 없는 컨테이너이다.
+  
+● JLabel
+  - 해당 컴포넌트에 이름을 붙일 수 있다.
+  - 기본적으로 왼쪽 정렬되며, Constructor에 두 번째 매개변수로 JLable의 Final 변수를 전달하여 위치를 조절할 수 있다.
+  
+● setBackground(Color)
+  - 해당 컴포넌트의 배경 색을 변경할 수 있다.
+  - 매개변수로 Color 객체를 전달하는데, 대표적인 색은 Final 변수로 미리 선언되어 있으므로 이를 전달하거나, (R, G, B)로 직접 원하는 색을 설정하여 전달할 수 있다.
+  
+● setForeground(Color)
+  - 해당 컴포넌트의 글자 색을 변경할 수 있다.
+
+● setOpaque(Boolean)
+  - true일 때 해당 컴포넌트를 불투명하게, false일 때 투명하게 한다.
+  
+● Font(서체, 유형, 글자 크기)
+  - 컴포넌트의 서체, 유형(기울임, 굵은 글씨 등), 글자 크기(px)를 설정할 수 있다.
+  
+● setText(String)
+  - 컴포넌트의 Label 내용을 변경할 수 있다.
