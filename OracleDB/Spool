@@ -1,0 +1,11 @@
+spool
+  - 입력된 모든 쿼리문과 실행 결과를 파일로 기록할 수 있다.
+
+◎ 예시
+  spool d:\bit_camp\\oracle.sql
+          .
+          .
+          .
+  spool off
+  // d:\bit_camp 디렉토리에 oracle.sql 이름으로 spool과 spool off 사이의 모든 내용이 저장된다.
+  
