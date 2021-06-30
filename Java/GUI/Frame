@@ -1,0 +1,27 @@
+Frame
+  - 실행될 파일의 프레임을 만들 수 있는 클래스이다.
+  - 프레임 클래스를 상속받거나 새 인스턴스를 만들어서 사용할 수 있다.
+  - 프레임의 Constructor로 String을 매개변수로 전달하면, 해당 매개변수를 프레임의 타이틀로 가지는 인스턴스를 생성할 수 있다.
+  
+● setTitle(String)
+  - 프레임의 타이틀을 입력할 수 있다.
+  - 프레임 클래스를 상속받는 경우에는 super(String) 형태로 만들 수도 있다.
+  
+● setSize(width, height)
+  - 프레임의 width, height를 픽셀 단위로 지정한다.
+  - width, height 정보를 담고 있는 Dimension 객체를 전달해도 된다.
+  
+● setLocation(x, y)
+  - 부모 프레임의 왼쪽 최상단을 (0, 0)으로 해서 x, y만큼 이동한 거리에 프레임을 위치시킨다.
+  - x, y 정보를 담고 있는 Point 객체를 전달해도 된다.
+  
+● setBounds(x, y, width, height)
+  - 프레임의 크기와 위치를 한 번에 설정한다.
+  - 크기, 위치 정보를 담고 있는 Rectangle 객체를 전달해도 된다.
+  
+● setIconImage(Image)
+  - Image 객체를 전달받으면 해당 이미지를 타이틀바의 아이콘으로 설정한다.
+  - Image 객체는 Toolkit.getDefaultToolkit().getImage("URL") 형태로 얻을 수 있다.
+  
+● setVisible(boolean)
+  - true를 전달하면 작성된 프레임을 보여준다.
