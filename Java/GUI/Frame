@@ -23,5 +23,8 @@ Frame
   - Image 객체를 전달받으면 해당 이미지를 타이틀바의 아이콘으로 설정한다.
   - Image 객체는 Toolkit.getDefaultToolkit().getImage("URL") 형태로 얻을 수 있다.
   
+● add(Component)
+  - 프레임에 버튼 등의 다른 컴포넌트를 담는다.
+  
 ● setVisible(boolean)
   - true를 전달하면 작성된 프레임을 보여준다.
