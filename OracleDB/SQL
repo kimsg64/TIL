@@ -44,3 +44,10 @@ SQL(Structured Query Language)
   
 ● savepoint
   - 특정 부분에서 transaction을 취소한다.
+  
+◎ 예시
+select * from table
+// "table" 테이블의 모든 데이터를 선택한다.
+
+select NAME, AGE from MEMBERS
+// "MEMBERS" 테이블에서 NAME 필드와 AGE 필드를 선택한다.
