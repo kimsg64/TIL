@@ -2,6 +2,7 @@ SQL(Structured Query Language)
   - 관계형 데이터베이스에 사용하는 표준 질의언어이다.
   - 컴파일이 필요 없는 인터프리터이다.
   - 명령어는 대소문자 구별 없이 사용할 수 있으나, 데이터(상수)는 대소문자를 구별한다.
+  - alias: 특정 필드에 설정하면, 실제 데이터 대신 설정된 별명을 표시해 준다.
   
 ● create
   - 데이터베이스를 생성한다.
@@ -46,8 +47,25 @@ SQL(Structured Query Language)
   - 특정 부분에서 transaction을 취소한다.
   
 ◎ 예시
-select * from table
+select * from table;
 // "table" 테이블의 모든 데이터를 선택한다.
 
-select NAME, AGE from MEMBERS
+select NAME, AGE from MEMBERS;
 // "MEMBERS" 테이블에서 NAME 필드와 AGE 필드를 선택한다.
+
+select * from tab;
+// 모든 테이블의 모든 데이터를 선택한다.
+
+select tname from tab;
+// 모든 테이블의 테이블명을 선택한다.
+
+select name "이름" from table;
+select name 이름 from table;
+select name as "이름" from table;
+select name as 이름 from table;
+// "table" 테이블의 "name" 필드의 값들을 보여주되, 필드명 "name"은 "이름"으로 치환하여 표시해 준다.
+
+select salary+100 from table;
+// salary 필드의 모든 값에 각각 100을 더한 결과를 표시해 준다.
+
+
