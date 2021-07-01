@@ -52,7 +52,13 @@
   - setPaintLabels(true): 슬라이더 바의 주 눈금의 값을 표시한다.
   - setLabelTable(Hashtable): key, value값을 가지는 Hashtable<K, V> 객체를 전달하면 사용자가 정의한 눈금을 추가할 수 있다.
   - setSnapToTicks(true): 정확한 위치를 클릭하지 않아도, 클릭된 위치와 가까운 곳으로 눈금을 이동시킬 수 있다.
-
+  
+● JComboBox
+  - 정해진 목록 중 하나를 선택하는 콤보 박스를 만들 수 있다.
+  - addItem(String): 콤보 박스의 목록에 String을 추가한다.
+  - Constructor에 첫 번째 매개변수로 배열, 컬렉션 등을 전달하면 해당 배열이나 컬렉션의 모든 요소들을 목록으로 가지는 콤보 박스를 생성할 수 있다.
+  - DefaultComboBoxModel 객체를 통해 콤보 박스를 만들 수도 있다.
+  
 
 < Method >
 ● setBackground(Color)
