@@ -1,3 +1,4 @@
+< Class >
 ● Button
   - 클릭에 반응하는 버튼을 생성할 수 있다.
 
@@ -7,7 +8,7 @@
   - setRolloverIcon(Image): 마우스를 버튼에 올려 놓으면 버튼의 아이콘을 바꾼다.
   - setEnabled(Boolean): true일 때 버튼을 활성화하고, false일 때 버튼을 비활성화한다.
   
-● radioButton
+● RadioButton
   - 여러개 중 하나를 선택할 수 있는 버튼을 생성할 수 있다.
   - ButtonGroup에 소속되면 그룹 구성원들 중 하나의 버튼을 선택했을 때, 기존에 선택되었던 버튼의 선택이 풀린다.
 
@@ -20,7 +21,40 @@
 ● JLabel
   - 해당 컴포넌트에 이름을 붙일 수 있다.
   - 기본적으로 왼쪽 정렬되며, Constructor에 두 번째 매개변수로 JLable의 Final 변수를 전달하여 위치를 조절할 수 있다.
+
+● JTextField
+  - 한 줄의 문자열을 입력할 수 있는 필드를 만들 수 있다.
+  - Constructor에 매개변수로 String을 전달하면 해당 문자열이 초기값으로 입력된다.
+  - Constructor에 매개변수로 int를 전달하면 필드의 크기가 int로 맞춰진다.
+  - getText(): 해당 필드에 입력된 문자열을 반환한다.
+  - getText(index, m): index부터 m개의 문자열만을 슬라이싱하여 반환한다.
   
+● JPasswordField
+  - 비밀번호를 입력할 수 있는 텍스트 필드를 만들 수 있다.
+
+● JTextArea
+  - 여러 줄을 입력할 수 있는 텍스트 필드를 만들 수 있다.
+
+● JScrollPane
+  - Constructor에 매개변수로 JTextArea를 전달하면, Scroll 기능이 추가된 TextArea를 만들 수 있다.
+
+● JCheckBox
+  - 체크박스를 만들 수 있다.
+  - Constructor에 첫 번째 매개변수로 전달된 String을 내용으로 하는 체크박스를 만든다.
+  - Constructor의 두 번째 매개변수로 true를 전달하면 체크된 상태의 체크박스를 만들 수 있다.
+
+● JSlider
+  - 슬라이더 바를 만들 수 있다.
+  - Constructor에 첫 번째 매개변수로 JSlider.HORIZONTAL 혹은 JSlider.VERTICAL을 전달하면 슬라이더의 방향을 정할 수 있다.
+  - setMajorTickSpacing(int): 슬라이더 바에 주 눈금을 추가한다.
+  - setMinorTickSpaceing(int): 슬라이더 바에 보조 눈금을 추가한다.
+  - setPaintTicks(true): 슬라이더 바의 눈금을 보이게 한다.
+  - setPaintLabels(true): 슬라이더 바의 주 눈금의 값을 표시한다.
+  - setLabelTable(Hashtable): key, value값을 가지는 Hashtable<K, V> 객체를 전달하면 사용자가 정의한 눈금을 추가할 수 있다.
+  - setSnapToTicks(true): 정확한 위치를 클릭하지 않아도, 클릭된 위치와 가까운 곳으로 눈금을 이동시킬 수 있다.
+
+
+< Method >
 ● setBackground(Color)
   - 해당 컴포넌트의 배경 색을 변경할 수 있다.
   - 매개변수로 Color 객체를 전달하는데, 대표적인 색은 Final 변수로 미리 선언되어 있으므로 이를 전달하거나, (R, G, B)로 직접 원하는 색을 설정하여 전달할 수 있다.
@@ -30,9 +64,14 @@
 
 ● setOpaque(Boolean)
   - true일 때 해당 컴포넌트를 불투명하게, false일 때 투명하게 한다.
-  
-● Font(서체, 유형, 글자 크기)
-  - 컴포넌트의 서체, 유형(기울임, 굵은 글씨 등), 글자 크기(px)를 설정할 수 있다.
-  
+  - JLabel은 false가 기본 값이므로, 배경색 변경 등의 작업을 위해서는 setOpaque(true)를 설정해야 한다.
+
 ● setText(String)
   - 컴포넌트의 Label 내용을 변경할 수 있다.
+  
+● setFont(font)
+  - 매개변수로 Font 객체를 전달받아 해당 컴포넌트의 글꼴을 변경할 수 있다.
+  - Font(서체, 스타일, 크기)를 통해 Font 객체를 만들 수 있다.
+  
+● setDefaultCloseOperation(DISPOSE_ON_CLOSE)
+  - 프로그램 종료 시에 점유하고 있는 자원을 해제하도록 설정한다.
