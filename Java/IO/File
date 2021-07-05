@@ -1,0 +1,62 @@
+File
+  - 파일 경로와 파일명을 입력받아 해당 파일에 대한 정보를 얻을 수 있는 클래스이다.
+  - 생성자 함수에 경로와 파일명을 전달함으로써 생성할 수 있다.
+  
+● mkdir(String)
+  - 해당 경로에 새로운 폴더를 생성한 후, 생성에 성공하면 true, 실패하면 false를 반환한다.
+
+● mkdirs(String)
+  - 해당 경로에 생성되지 않은 모든 폴더를 새로 생성한 후, 생성에 성공하면 true, 실패하면 false를 반환한다.
+  
+● exists()
+  - 해당 폴더 객체가 존재하면 true, 존재하지 않으면 false를 반환한다.
+  
+● createNewFile(File)
+  - File 객체를 전달받으면 해당 경로에 해당 파일을 새롭게 생성한 후, 생성에 성공하면 true, 실패하면 false를 반환한다.
+  
+● lastModified()
+  - 해당 파일의 마지막 수정일을 Long 형태로 반환한다. 
+  - Long 형태의 리턴 값에는 1970년 1월 1일로부터 마지막 수정일까지 경과한 시간을 밀리 초 단위로 환산한 값이 담겨 있다.
+  - Calendar 클래스의 setTimeInMillis(millis) 메소드를 이용하여 Calendar 객체의 시간을 마지막 수정일로 설정할 수 있다.
+  
+● canExecute()
+  - 해당 파일이 실행형 파일인지를 확인하고 true or false를 반환한다.
+
+● canRead()
+  - 해당 파일을 읽을 수 있는지를 확인하고 true or false를 반환한다.
+
+● canWrite()
+  - 해당 파일에 새롭게 내용을 쓸 수 있는지를 확인하고 true or false를 반환한다.
+  
+● listFiles()
+  - 특정 디렉토리에 위치한 모든 파일과 폴더 정보를 File[] 배열로 반환한다.
+
+● isDirectory()
+  - 해당 File 객체가 폴더면 true, 파일이면 false를 반환한다.
+
+● isFile()
+  - 해당 File 객체가 파일이면 true, 폴더면 false를 반환한다.
+
+● isHidden()
+  - 해당 File 객체가 숨겨져 있으면 true를 반환한다.
+
+● getName()
+  - 해당 File 객체의 이름을 반환한다.
+
+● getPath()
+  - 해당 File 객체의 경로를 반환한다.
+
+● getParent()
+  - 해당 File 객체의 부모, 즉 상위 디렉토리를 반환한다.
+
+● getAbsolutePath()
+  - 해당 File 객체의 절대 경로를 반환한다.
+
+● listRoots()
+  - 현재 컴퓨터의 모든 드라이브를 반환한다.
+
+● length()
+  - 해당 File 객체의 크기를 long 형태로 반환하며, 이 때 단위는 byte를 사용한다.
+
+● delete()
+  - 해당 File 객체를 삭제하고, 삭제에 성공하면 true, 실패하면 false를 반환한다.
