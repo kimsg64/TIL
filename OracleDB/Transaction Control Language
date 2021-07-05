@@ -1,0 +1,11 @@
+Transaction Control Language
+  - 트랜젝션 제어 언어는 트랜젝션을 처리할 수 있다.
+  
+● commit
+  - 데이터베이스 내용의 업데이트를 영구적으로 확정한다.
+  
+● rollback
+  - 데이터베이스에 업데이트 오류가 발생했을 때, 이전 상태로 되돌린다.
+  
+● savepoint
+  - 특정 부분에서 transaction을 취소한다.
