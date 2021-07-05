@@ -1,0 +1,18 @@
+FileInputStream
+  - File의 내용을 byte 단위로 읽을 수 있는 클래스이다.
+  - 생성자 함수의 첫 번째 매개변수로는 File 객체를 전달하며, 해당 파일에 입력된 내용이 있다면 기존 내용을 덮어쓴다.
+  - 생성자 함수의 두 번째 매개변수로 true를 전달하면 기존 내용에 이어서 새로운 내용을 추가한다.
+
+FileReader
+  - File의 내용을 문자 단위로 읽을 수 있는 클래스이다.
+
+FileOutputStream
+  - File을 byte 단위로 쓸 수 있는 클래스이다.
+  
+FileWriter
+  - File을 문자 단위로 쓸 수 있는 클래스이다.
+  - 생성자 함수의 매개변수로 전달받은 File 객체로 FileWriter 객체를 생성한다.
+
+● readLine()
+  - enter가 입력될 때까지 입력된 문자열을 String으로 출력한다.
+  - 읽을 내용이 없으면 null을 반환한다.
