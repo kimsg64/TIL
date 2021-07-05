@@ -1,0 +1,23 @@
+InputStream
+  - java.io 패키지(콘솔/파일/네트워크로부터의 input을 받거나 콘솔/파일/네트워크에 output을 보내는 것과 관련된 클래스들의 패키지)의 클래스이다. 
+  - byte 단위로 문자를 입력받는다.
+  - Stream은 데이터가 이동하는 통로이다.
+  
+InputStreamReader
+  - InputStream과 달리 문자 단위로 문자를 입력받는다. 
+  - 한글이나 기타 2byte 크기의 문자열을 입력받아도 깨지지 않는다.
+
+● read()
+  - 다음 byte를 읽는 추상 메소드이다.
+  - System.in 클래스에 이미 메소드가 완성되어 있으므로, 일반적으로 InputStream, InputStreamReader 자료형을 만들 때는 System.in 객체를 생성하여 사용한다.
+  - 입력된 InputStream 혹은 InputStreamReader 객체의 다음 byte 또는 문자를 int 자료형인 아스키 코드로 반환한다.
+  - 다음 byte 또는 문자가 존재하지 않는 경우에는 -1을 반환한다.
+  
+● read(array[n])
+  - read의 매개변수로 길이가 n인 배열을 전달하면, 입력된 InputStream 객체를 n byte만큼, InputStreamReader 객체를 n 글자 반환한다.
+
+● read(array[n], m, l)
+  - read의 매개변수로 길이가 n인 배열을 전달하면, 입력된 InputStream 또는 InputStreamReader 객체를 array의 인덱스 m부터 l개의 길이만큼 저장한다.
+
+◎ 예시
+  InputStream input = System.in;
