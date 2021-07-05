@@ -1,0 +1,82 @@
+Data Manipulation Language(DML)
+  - 데이터 조작 언어는 스키마 객체의 데이터를 입력, 수정, 조회, 삭제한다.
+  
+● insert
+  - 데이터베이스에 데이터를 입력한다.
+  
+● delete
+  - 데이터베이스의 데이터를 삭제한다.
+  
+● update
+  - 데이터베이스의 데이터를 수정한다.
+  
+● select
+  - 데이터베이스에서 데이터를 검색한다.
+  ◎ 예시
+    select * from table;
+    // "table" 테이블의 모든 데이터를 선택한다.
+
+    select NAME, AGE from MEMBERS;
+    // "MEMBERS" 테이블에서 NAME 필드와 AGE 필드를 선택한다.
+
+    select * from tab;
+    // 모든 테이블의 모든 데이터를 선택한다.
+
+    select tname from tab;
+    // 모든 테이블의 테이블명을 선택한다.
+
+    select name "이름" from table;
+    select name 이름 from table;
+    select name as "이름" from table;
+    select name as 이름 from table;
+    // "table" 테이블의 "name" 필드의 값들을 보여주되, 필드명 "name"은 "이름"으로 치환하여 표시해 준다.
+
+    select salary+100 from table;
+    // salary 필드의 모든 값에 각각 100을 더한 결과를 표시해 준다.
+  
+● Where
+  - 조건문을 만들 때 사용한다.
+  - =: 좌항과 우항의 값이 같다.
+  - !=, <>: 좌항과 우항의 값이 다르다.
+  - in (list): list의 요소 중 하나라도 같은 값이 있는 요소를 반환한다.
+  - not in (list): list의 요소가 하나도 없는 요소를 반환한다.
+  - between A and B: A와 B 사이에 속하는 모든 요소를 반환한다. 이 때, A, B도 포함한다.
+  - not between A and B: A와 B 사이에 속하지 않는 모든 요소를 반환한다.
+  - like: 문자의 일부가 일치하는 모든 요소를 반환한다.
+  - not like: 문자의 일부와 일치하지 않는 모든 요소를 반환한다.
+  - is null: field 값이 null인 모든 요소를 반환한다. (null은 일반 연산자로 연산할 수 없다.)
+  - is not null: field 값이 null이 아닌 모든 요소를 반환한다.
+  - order by field asc: field를 기준으로 데이터를 오름차순으로 정렬하여 반환한다.
+  - order by field desc: field를 기준으로 데이터를 내림차순으로 정렬하여 반환한다.
+  
+● NVL(field, value)
+  - 해당 field의 값이 null인 모든 요소의 값을 value로 변경한다.
+
+● ||
+  - 문자와 문자, 문자와 필드를 연결한다.
+  
+● distinct
+  - field명 왼쪽에 입력하면 중복을 제거하여 반환한다.
+  - 단, 필드는 하나만 입력할 수 있다.
+  
+● alias
+  - 특정 필드에 설정하면 실제 데이터 대신 설정된 별명을 표시해 준다.  
+
+◎ 예시
+  select * from table where job='PROGRAMMER';
+  // "table" 테이블에서 job의 값이 PROGRAMMER인 모든 요소를 찾아 반환한다. 이 때, 문자열은 작은따옴표('')로 표시한다.
+
+  select * from table where job in ('PROGRAMMER', 'ANALYST');
+  // "table" 테이블에서 job의 값이 PROGRAMMER 혹은 ANALYST인 요소를 모두 찾아 반환한다.
+
+  select * from table where salary between 2000 and 3000;
+  // "table" 테이블에서 salary의 값이 2000 이상 3000 이하인 요소를 모두 찾아 반환한다.
+
+  select * from table where name like '%a';
+  // name의 전체 문자의 길이와 무관하게 마지막 글자가 a로 끝나는 요소를 모두 찾아 반환한다.
+
+  select * from table where name not like '_a%';
+  // name의 두 번째 문자가 a이고, a 앞의 글자는 한 글자인 모든 요소 제외한 나머지 요소들을 반환한다.
+
+  select * from table where name not like '__a__';
+  // name의 길이가 5자이고, 세 번째 글자가 a인 모든 요소들을 반환한다.
