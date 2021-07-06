@@ -138,3 +138,33 @@ Data Manipulation Language(DML)
   - 특정 문자의 첫 번째 위치를 반환하며, 없는 경우 0을 반환한다.
   - m을 전달할 경우 m번째 이후부터 검색한다.
   - n을 전달할 경우 m을 포함하여 m부터 시작하여 n번째 char의 위치를 반환한다.
+
+● trim(string, from field)
+  - 필드 값의 양 가장자리에 특정 string이 있다면 모두 제거한 값을 반환한다.
+  
+● ltrim(stringA, stringB)
+  - 문자열 A의 왼쪽 가장자리에 문자열 B에 해당하는 값이 있다면 이를 모두 제거한 값을 반환한다.
+  
+● rtrim(stringA, stringB)
+  - 문자열 A의 오른쪽 가장자리에 문자열 B에 해당하는 값이 있다면 이를 모두 제거한 값을 반환한다.
+  
+● decode(field, value1, replacement1, value2, replcaement2, ...)
+  - 해당 필드에서 각 value의 값을 해당 replacement의 값으로 바꾼 값을 반환한다.
+  
+● sysdate
+  - 현재 날짜 정보를 가지고 있는 내장된 field이다.
+
+● to_char(date, pattern)
+  - 첫 번째 매개변수로 받은 날짜 정보를 pattern에 따라 문자 데이터로 변경하여 반환한다.
+
+● to_date(string, pattern)
+  - pattern을 기준으로 첫 번째 매개변수로 받은 문자 데이터를 읽어 날짜 데이터로 변경하여 반환한다.
+
+● last_dat(date)
+  - 주어진 날짜와 데이터와 같은 월의 마지막 날을 반환한다.
+
+● add_months(dateA, numberB)
+  - A를 기준으로 B개월 이후의 날짜를 반환한다.
+  
+● months_between(dateA, dateB)
+  - A와 B 사이의 기간을 개월 수로 반환한다.
