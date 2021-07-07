@@ -34,6 +34,8 @@
 
 ● JTextArea
   - 여러 줄을 입력할 수 있는 텍스트 필드를 만들 수 있다.
+  - getSelectedText(): Text Area에서 선택(드래그)된 문자를 반환한다.
+  - replaceSelection(String): Text Area에서 선택(드래그)된 문자를 매개변수로 전달된 문자로 대체한다.
 
 ● JScrollPane
   - Constructor에 매개변수로 JTextArea를 전달하면, Scroll 기능이 추가된 TextArea를 만들 수 있다.
