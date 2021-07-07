@@ -3,10 +3,48 @@ JMenuBar
   
 JMenu
   - 메뉴를 만들 수 있는 클래스이다.
+
+  ● addSeparator()
+    - 메뉴의 경계선을 만들어 준다.  
   
 JMenuItem
   - 메뉴의 각 항목들을 만들 수 있는 클래스이다.
   - JMenuItem의 매개변수로 JMenu를 전달하여 서브메뉴처럼 활용할 수 있다.
 
+  ● setMnemonic(key code)
+    - 입력 받은 key code를 단축키로 설정한다.
+    - key code는 KeyEvent의 final static 변수로 설정되어 있는 것을 확인할 수 있다.
+
+  ● setAccelerator(KeyStroke)
+    - ctrl, alt, shift 등의 mask 키를 조합하여 단축키를 설정할 수 있다.
+    - KeyStroke의 static 메소드인 getKeyStroke(key kode, mask key) 메소드로 생성할 수 있다.
+    - mask 키의 key code는 ActionEvent에 static 변수로 존재한다.
+
 JFileChooser
-  - 파일 선택용 탐색기 창을 만들 수 있다.
+  - 파일 선택용 탐색기 창(Dialog)을 만들 수 있다.
+  
+  ● showOpenDialog(parent)
+    - open 다이얼로그를 생성한다.
+    - 매개변수로는 부모 컴포넌트를 전달하는데, 메뉴 창에서 선택한 결과로 open 다이얼로그를 나타내기 위해서는 this를 전달한다.
+    - 메소드의 실행 결과 1 혹은 0이 반환되는데, 취소를 선택한 경우에는 1, 열기를 선택한 경우에는 0을 반환한다.
+    
+  ● showSaveDialog(parent)
+    - save 다이얼로그를 생성한다.
+    - 메소드의 실행 결과 1 혹은 0이 반환되는데, 취소를 선택한 경우에는 1, 저장을 선택한 경우에는 0을 반환한다.
+    
+  ● getSelectedFile()
+    - 다이얼로그에서 선택된 파일 객체를 반환한다.
+ 
+  ● setFileFilter(FileFilter)
+    - 파일 선택 다이얼로그에서 필터를 만들 수 있다.
+    
+  ● setMultiSelectionEnabled(boolean)
+    - 매개변수로 true를 전달하면 파일 선택 다이얼로그에서 파일을 여러 개 선택할 수 있다.
+    
+  ● getSelectedFiles()
+    - 다이얼로그에서 선택된 모든 파일 객체의 배열을 반환한다.
+
+FileNameExtensionFilter
+  - 파일 선택 다이얼로그에 전달하기 위한 파일 필터 정보를 담을 수 있는 클래스로, 인스턴스를 만들어 상위 클래스인 FileFilter로 저장한 뒤 JFileChooser의 setFileFilter에 전달할 수 있다.
+  - 생성자 함수로 전달되는 첫 번째 매개변수로는 필터명, 두 번째 이후로는 필터링 기준을 전달한다.
+  
