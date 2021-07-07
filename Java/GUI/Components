@@ -61,6 +61,23 @@
   - Constructor에 첫 번째 매개변수로 배열, 컬렉션 등을 전달하면 해당 배열이나 컬렉션의 모든 요소들을 목록으로 가지는 콤보 박스를 생성할 수 있다.
   - DefaultComboBoxModel 객체를 통해 콤보 박스를 만들 수도 있다.
   
+● JList
+  - 리스트를 만들 수 있다.
+  
+● DefaultListModel
+  - JList에 기본으로 들어갈 내용들을 담은 모델을 만들 수 있다.
+  
+● Canvas
+  - 그림을 그릴 수 있는 캔버스 객체를 만들 수 있다.
+  
+● Graphics
+  - Canvas에 그림을 그릴 수 있는 각종 메소드를 가진 클래스이다.
+  - drawLine(x1, y1, x2, y2): x1, y1에서 x2, y2까지 직선을 그린다.
+  - drawOval(x, y, width, height): x, y에서 시작하여 width, height에 맞는 타원을 그린다.
+  - fillOval(x, y, width, height): x, y에서 시작하여 width, height에 맞는 타원을 그리되, 도형 안을 칠한다.
+  - fillRect(x, y, width, height): x, y에서 시작하여 width, height에 맞는 사각형을 그리되, 도형 안을 칠한다.
+  - drawPolygon()
+  
 
 < Method >
 ● setBackground(Color)
