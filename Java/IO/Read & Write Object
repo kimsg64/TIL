@@ -1,7 +1,12 @@
 ObjectInputStream
-  - FileInputStream 객체를 전달받아 Object로 이루어진 파일을 읽을 수 있는 클래스이다.
+  - byte 형태의 FileInputStream 객체를 전달받아 Object로 이루어진 파일을 읽을 수 있는 클래스이다.
   ● readObject(): 전달받은 객체를 읽는다.
 
 ObjectOutputStream
-  - FileOutputStream 객체를 전달받아 Object를 파일로 쓸 수 있는 클래스이다.
+  - FileOutputStream 객체를 전달받아 Object를 byte 형태의 파일로 쓸 수 있는 클래스이다.
   ● writeObject(): 객체로 파일을 쓴다.
+
+Serializable
+  - 클래스를 파일로 쓰기 위해서는 해당 클래스에서 Serializable 인터페이스를 상속받아 직렬화해야 한다.
+  - 직렬화란, 자바 시스템에서 사용되는 객체나 데이터를 외부에서도 사용할 수 있도록 byte 형태로 변환하는 것이다.
+  - JVM의 메모리의 객체 데이터를 byte 형태로 변환한다.
