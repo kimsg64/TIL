@@ -3,6 +3,10 @@ Data Definition Language(DDL)
 
 ● create
   - 데이터베이스 객체를 생성한다.
+  - create table tableA 형태로 tableA 테이블을 만든다.
+  - create table tableB as select * from tableA 형태로 tableA의 내용을 그대로 복사한 tableB를 만들 수 있다.
+  - select와 함께 이용하여 다양한 형태로 다른 테이블을 복사할 수 있다.
+  - create table tableA as select * from tableB where 1=2; 와 같이 원하는 필드의 구조만 복사하는 경우에는 조건절에 항상 fasle인 조건식을 전달한다.
   
 ● drop
   - 데이터베이스 객체를 삭제한다.
