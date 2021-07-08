@@ -1,0 +1,7 @@
+ObjectInputStream
+  - FileInputStream 객체를 전달받아 Object로 이루어진 파일을 읽을 수 있는 클래스이다.
+  ● readObject(): 전달받은 객체를 읽는다.
+
+ObjectOutputStream
+  - FileOutputStream 객체를 전달받아 Object를 파일로 쓸 수 있는 클래스이다.
+  ● writeObject(): 객체로 파일을 쓴다.
