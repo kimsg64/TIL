@@ -1,14 +1,25 @@
 Data Manipulation Language(DML)
   - 데이터 조작 언어는 스키마 객체의 데이터를 입력, 수정, 조회, 삭제한다.
+  - insert, delete, update를 통해 데이터베이스를 수정하는 작업의 단위를 트랜잭션(transaction)이라고 한다.
+  - 트랜잭션을 데이터베이스에 반영하기 위해서는 commit 명령이 필요하며, commit 되지 않은 작업은 rollback 명령을 통해 실행 취소가 가능하다.
+  - cmd 환경에서는 quit 명령으로 종료하면 트랜잭션이 자동으로 commit되고, 강제로 종료하면 자동으로 rollback된다.
   
 ● insert
-  - 데이터베이스에 데이터를 입력한다.
+  - 데이터베이스에 레코드를 추가한다.
+  - insert into table(field1, field2, ...) values(value1, value2, ...) 형태로 실행한다.
+  - 모든 필드값을 추가하는 경우에는 필드명을 생략하고 insert into values(value1, value2, ...) 형태로 입력이 가능
+  - 필드값을 추가할 때는 해당 필드에서 요구하는 데이터 타입에 맞게 value를 전달해야 하는데, 이는 desc field로 확인할 수 있다.
+  - desc field로 반환되는 데이터 타입은 NUMBER(n, m), VARCHAR2(n), DATE 등이 있다.
+  - NUMBER(n, m): 정수 부분이 n자리, 실수 부분이 m자리인 숫자 데이터
+  - VARCHAR2(n): 길이가 n인 문자열 데이터
+  - DATE: 날짜 데이터
   
 ● delete
   - 데이터베이스의 데이터를 삭제한다.
   
 ● update
   - 데이터베이스의 데이터를 수정한다.
+  - update table set field=changed 형태로, 원하는 테이블의 필드의 값을 수정할 수 있다.
   
 ● select
   - 데이터베이스에서 데이터를 검색한다.
