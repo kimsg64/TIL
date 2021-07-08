@@ -198,3 +198,18 @@ Data Manipulation Language(DML)
   
 ● having
   - group by에 대한 조건문을 만들 때 사용한다.
+
+● rollup(field)
+  - group by 절에 작성하면 마지막 레코드로 필드별 레코드의 합계를 구해 준다.
+  
+● cube(field1, field2)
+  - group by 절에 작성하면 field1의 내용에 따라 레코드를 나누고, 이를 다시 field2를 기준으로 나누어 레코드의 합계를 구해 준다.
+
+● grouping(field)
+  - rollup 혹은 cube로 합계를 구한 그룹의 데이터는 1로, 그렇지 않은 데이터는 0으로 표시해 준다.
+
+
+
+
+
+
