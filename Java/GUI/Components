@@ -76,7 +76,9 @@
   - drawOval(x, y, width, height): x, y에서 시작하여 width, height에 맞는 타원을 그린다.
   - fillOval(x, y, width, height): x, y에서 시작하여 width, height에 맞는 타원을 그리되, 도형 안을 칠한다.
   - fillRect(x, y, width, height): x, y에서 시작하여 width, height에 맞는 사각형을 그리되, 도형 안을 칠한다.
-  - drawPolygon()
+  - drawPolygon(x[], y[], n): x, y를 좌표로 하는 n개의 점을 전달하면 n각형을 그릴 수 있다.
+  - drawRoundRect(x, y, width, height, circle_width, circle_height): 모서리가 둥근 사각형을 그릴 수 있다.
+  - drawString(String, x, y): x, y 위치에 String을 출력할 수 있다.
   
 
 < Method >
