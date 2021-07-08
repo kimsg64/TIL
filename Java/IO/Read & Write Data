@@ -1,0 +1,13 @@
+DataInputStream
+  - FileOutputStream 객체를 전달받아 각 데이터 타입에 맞게 읽을 수 있는 클래스이다.
+  ● readInt(int): 전달된 int 데이터를 읽는다.
+  ● readDouble(double): 전달된 double 데이터를 읽는다.
+  ● readBoolean(boolean): 전달된 boolean 데이터를 읽는다.
+  ● readChar(char): 전달된 char 데이터를 읽는다.
+
+DataOutputStream
+  - FileOutputStream 객체를 전달받아 각 데이터 타입에 맞게 쓸 수 있는 클래스이다.
+  ● writeInt(int): int 데이터를 쓴다.
+  ● writeDouble(double): double 데이터를 쓴다.
+  ● writeBoolean(boolean): boolean 데이터를 쓴다.
+  ● writeChar(char): char 데이터를 쓴다.
