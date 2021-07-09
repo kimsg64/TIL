@@ -7,5 +7,8 @@ Transaction Control Language
 ● rollback
   - 데이터베이스에 업데이트 오류가 발생했을 때, 이전 상태로 되돌린다.
   
-● savepoint
-  - 특정 부분에서 transaction을 취소한다.
+● savepoint 'A'
+  - A 지점을 롤백의 지점으로 삼는다.
+
+● rollback to 'savepoint'
+  - savepoint를 통해 세이브한 지점으로 롤백한다.
