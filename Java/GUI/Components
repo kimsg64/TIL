@@ -84,7 +84,7 @@
   - drawPolygon(x[], y[], n): x, y를 좌표로 하는 n개의 점을 전달하면 n각형을 그릴 수 있다.
   - drawRoundRect(x, y, width, height, circle_width, circle_height): 모서리가 둥근 사각형을 그릴 수 있다.
   - drawString(String, x, y): x, y 위치에 String을 출력할 수 있다.
-	- drawImage(Image, cx1, cy1, cx2, cy2, ix1, iy1, ix2, iy2, this): (cx1, cy1)과 (cx2, cy2) 사이의 공간에 (ix1, iy1)과 (ix2, iy2) 사이에 해당하는 이미지의 일부를 그릴 수 있다.
+  - drawImage(Image, cx1, cy1, cx2, cy2, ix1, iy1, ix2, iy2, this): (cx1, cy1)과 (cx2, cy2) 사이의 공간에 (ix1, iy1)과 (ix2, iy2) 사이에 해당하는 이미지의 일부를 그릴 수 있다.
   
 
 < Method >
