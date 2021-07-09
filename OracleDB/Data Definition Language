@@ -7,12 +7,22 @@ Data Definition Language(DDL)
   - create table tableB as select * from tableA 형태로 tableA의 내용을 그대로 복사한 tableB를 만들 수 있다.
   - select와 함께 이용하여 다양한 형태로 다른 테이블을 복사할 수 있다.
   - create table tableA as select * from tableB where 1=2; 와 같이 원하는 필드의 구조만 복사하는 경우에는 조건절에 항상 fasle인 조건식을 전달한다.
+  - create table tableA(fieldA, datatypeA(n), ConditionA, fieldB, datatypeB, ConditionB, ...) 형식으로, 테이블 구조를 새롭게 만들 수 있다.
+  - Condition으로 not null을 전달하면 해당 필드는 null값이 허용되지 않는다.
+  - Condition으로 default data를 전달하면, 해당 필드의 default값이 data로 설정되며, 데이터를 입력하지 않는 경우 default 값이 자동으로 입력된다.
   
 ● drop
   - 데이터베이스 객체를 삭제한다.
+  - drop table tableA 형태로 tableA를 삭제한다. 이 때, 쓰레기 값이 남는다.
+  - drop table tableA purge 형태로 tableA를 쓰레기값을 포함하여 완전히 삭제한다.
+  - purge recyclebin 명령으로 데이터베이스에 남아 있는 쓰레기 값을 삭제한다.
 
 ● alter
-  - 기존 데이터베이스를 재정의한다.
+  - 기존 데이터베이스를 재정의한다. 기존 테이블을 관리할 때 사용한다.
+  - 기존 테이블의 필드를 add, modify, drop할 때, 필요하다.
+  - alter table tableA add(fieldA datatypeA(n)) 형식으로 tableA의 마지막 필드로 fieldA를 새롭게 추가할 수 있다.
+  - alter table tableA modify(fieldA datatypeA(n)) 형식으로 fieldA의 필드 구조(데이터 타입이나 크기)를 수정할 수 있다.
+  - alter table tableA drop column fieldA 형식으로 fieldA를 테이블에서 제거할 수 있다.
   
 ● rename
   - 기존 테이블명을 변경한다.
