@@ -1,0 +1,15 @@
+JTabbedPane
+  - 탭 목록이 포함된 패널을 만들 수 있다.
+  - 각 패널에는 다른 컴포넌트를 담을 수 있다.
+  
+● addTab(title, Component)
+  - 전달받은 문자열을 제목으로 하여 컴포넌트를 탭 패널에 추가한다.
+
+● insertTab(title, icon, Component, tip, index)
+  - 컴포넌트를 원하는 위치의 패널에 추가한다.
+
+● setEnabledAt(index, boolean)
+  - 두 번째 매개변수로 false를 전달하면 해당 인덱스의 탭 메뉴를 비활성화한다.
+
+● removeTabAt(index)
+  - 해당 인덱스의 탭 메뉴를 삭제한다.
