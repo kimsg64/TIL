@@ -1,0 +1,21 @@
+JTable
+  - 표를 만들 수 있는 클래스다.
+  - DefaultTableModel 클래스를 추가하여 테이블의 내용을 추가할 수 있다.
+  
+● addRow(Object)
+  - 테이블에 행을 추가할 수 있다.
+
+● insertRow(index, Object)
+  - 전달한 인덱스에 행을 추가할 수 있다.
+
+● moveRow(start, end, to)
+  - index가 start부터 end까지에 해당하는 행을 to로 이동한다.
+
+● addColumn(title, data)
+  - 테이블에 title 항목을 추가하고, data를 전달하면 값을 추가할 수 있다.
+
+● removeRow(index)
+  - index에 해당하는 행을 지운다.
+
+● removeColumn()
+  - 해당하는 열을 지운다.
