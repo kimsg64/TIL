@@ -1,0 +1,10 @@
+JSplitPane
+  - 부모 프레임을 분할하여 스플릿 패널로 만들 수 있다.
+  - 생성자 함수의 첫 번째 매개변수로 final 변수 VERTICAL_SPLIT, HORIZONTAL_SPLIT을 전달할 수 있는데, 이를 통해 요소를 어떤 방향으로 배치할지 결정할 수 있다.
+  - 두 번째, 세 번째 인자로는 나뉘어진 패널에 배치될 요소를 전달할 수 있다.
+  
+● setDividerLocation(int)
+  - 경계선의 위치를 정할 수 있다.
+  
+● setDividerSize(int)
+  - 경계선의 두께를 정할 수 있다.
