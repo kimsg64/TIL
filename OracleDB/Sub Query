@@ -7,7 +7,10 @@ Sub Query
 
 ● 다중 행 서브 쿼리
   - select의 결과로 복수의 행을 반환하는 서브 쿼리
-  - in, not in, any, all, exists를 사용할 수 있다.
+  - IN, NOT IN, ANY, ALL, EXISTS를 사용할 수 있다.
+  - ANY는 조건을 하나라도 만족하는 모든 행을 반환한다.
+  - ALL은 조건을 모두 만족하는 행만을 반환한다.
+  - EXISTS는 조건을 만족하는 행이 있는지를 확인하여 반환한다.
 
 ● 다중 열 서브 쿼리
   - 
