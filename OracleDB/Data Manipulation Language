@@ -220,8 +220,14 @@ Data Manipulation Language(DML)
 ● grouping(field)
   - rollup 혹은 cube로 합계를 구한 그룹의 데이터는 1로, 그렇지 않은 데이터는 0으로 표시해 준다.
 
+● merge into table1 using (table2) on (condition) when matched then update set code when not matched then insert () values()
+  - condition에 부합한다면, table2를 이용해 table1을 update하고, 부합하지 않는다면 table2를 이용해 table1을 insert한다.
 
+● case field when condition1 then code1 when condition2 then code2... end as alias
+  - 해당 필드가 조건 1에 부합한다면 코드 1을, 조건 2에 부합한다면 코드 2를, ... 고른다.
 
+● nullif(A, B)
+  - A, B의 값이 같다면 Null, 같지 않다면 A를 반환한다.
 
-
-
+● coalesce(A, B, C, ...)
+  - A가 Null이 아니면 A를, Null이면 B, C, ...를 반환한다.
