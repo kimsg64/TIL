@@ -15,3 +15,6 @@ URL
 
 ● getPath()
   - URL 객체로부터 경로를 String으로 반환한다.
+
+● openConnection()
+  - URL 객체로부터 해당 페이지의 헤더 정보가 담긴 URLConnection 객체를 생성한다.
