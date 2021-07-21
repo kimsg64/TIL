@@ -1,0 +1,17 @@
+URL
+  - "Protocol://host/port/filename" 형태의 주소로부터 해당 웹 서버의 리소스를 가져온다.
+  
+● getProtocol()
+  - URL 객체로부터 프로토콜을 String으로 반환한다.
+
+● getHost()
+  - URL 객체로부터 호스트명을 String으로 반환한다.
+
+● getPort()
+  - URL 객체로부터 port 번호를 int로 반환한다.
+
+● getFile()
+  - URL 객체로부터 파일명을 String으로 반환한다.
+
+● getPath()
+  - URL 객체로부터 경로를 String으로 반환한다.
