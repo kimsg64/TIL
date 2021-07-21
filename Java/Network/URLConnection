@@ -1,0 +1,8 @@
+URLConnection
+  - 해당 웹 페이지의 헤더 정보를 구할 수 있다.
+  
+● connect()
+  - 헤더 정보를 가져오기 위한 통신 채널을 확보할 수 있다.
+  
+● getContentType()
+  - 헤더 정보를 가져와 String으로 변환한다.
