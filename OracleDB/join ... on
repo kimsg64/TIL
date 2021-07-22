@@ -18,3 +18,7 @@ join ... on
   - 두 테이블 중, null이 발생하는 테이블의 필드에 (+)를 추가적으로 작성한다.
   - right outer join: 두 테이블 중 오른쪽 테이블에서 null이 발생하는 경우에 join 대신 작성한다.
   - left outer join: 두 테이블 중 왼쪽 테이블에서 null이 발생하는 경우에 join 대신 작성한다.
+  - full outer join: 두 테이블의 모든 null을 표시해 준다.
+
+● Join ... using(field)
+  - 두 테이블이 동일한 이름의 필드를 가지고 있을 때, 이를 기준으로 join을 하는 경우라면 on 대신 using을 사용할 수 있다.
