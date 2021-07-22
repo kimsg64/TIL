@@ -1,0 +1,18 @@
+TCP(Transmission Control Protocol)
+  - 통신의 방식 중 하나로, 서버와 클라이언트가 서로 연결된 상태에서 정보를 주고받는 방식이다.
+
+Socket
+  - 생성자 함수의 매개변수로 IP 정보가 담긴 InetAddress 객체와 포트 번호를 전달하면 해당 IP 주소와 포트 번호를 통해 서버에 접속할 수 있다.
+● getInetAddress()
+  - Socket에 저장된 IP 정보로부터 InetAddress 객체를 반환한다.
+● getOutputStream()
+ - Socket에 저장된 정보를 OutputStream 객체로 변환한다.
+● getInputStream()
+ - Socket에 저장된 정보를 InputStream 객체로 변환한다.
+
+ServerSocket
+  - 클라이언트가 접속하면 클라이언트의 IP 정보를 받아 새로운 Socket 클래스를 만들 수 있다.
+  - 생성자 함수의 매개변수로 포트 번호를 전달하면 해당 번호의 포트를 통해 서버에 접속할 수 있다.
+● accept()
+  - 클라이언트가 접속할 때까지 대기하며, 클라이언트가 접속하면 해당 클라이언트의 IP 정보를 담은 Socket 객체를 반환한다.
+  - 반환된 Socket 객체는 일반적으로 컬렉션에 저장되며, 다음 접속을 위해 기존의 접속을 끊은 뒤 대기 상태로 돌아간다.
