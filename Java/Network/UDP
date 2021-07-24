@@ -1,0 +1,39 @@
+UDP
+  - 통신 방식 중의 하나로, 데이터를 패킷 단위로 전송한다.
+  - 네트워크를 종료시킬 때까지 연결이 유지되는 TCP 방식과 달리 데이터의 전송이 끝나면 연결이 끝난다.
+
+
+Unicast
+  - 1:1로 데이터를 직접 전송한다.
+
+DatagramSocket
+  - 생성자 함수의 매개변수로 포트 번호를 전달받으면 해당 포트를 통해 데이터를 전송받을 수 있다.
+  - 생성자 함수에 매개변수를 전달하지 않으면 데이터를 전송할 수 있다.
+● receive(DatagramPacket)
+  - 포트를 통해 데이터가 전송될 때까지 대기하며, 데이터를 전송받으면 해당 데이터를 매개변수로 전달받은 DatagramPacket 객체에 저장한다.
+● send(DatagramPacket)
+  - 데이터와 전송받을 주소 정보를 담은 DatagramPacket 데이터를 해당 주소로 전송한다.
+
+DatagramPacket
+  - 데이터를 패킷 단위로 묶는 클래스이다.
+  - 생성자 함수의 매개변수로 byte배열과 정수를 전달하면, 두 번째 매개변수인 정수가 패킷의 크기가 되며, 일반적으로는 512로 설정한다.
+  - 생성자 함수의 매개변수로 전송될 데이터(byte형태), 전송될 데이터의 크기(byte단위), 전송받을 상대방의 IP주소를 담은 InetAddress 객체, 포트 번호를 전달하면 해당 IP의 포트를 통해 데이터를 전송할 수 있다.
+● getData
+  - DatagramPacket 객체에 저장된 전송받은 데이터를 byte 배열로 반환한다.
+  - byte 배열을 원하는 형태(String, File 등)로 변환하면 해당 데이터를 읽을 수 있다.
+● getLength
+  - DatagramPacket 객체에 저장된 전송받은 데이터의 크기를 int 형태로 반환한다.
+  
+  
+Multicast
+  - 1:多 통신방식으로, 공용 주소를 거쳐 데이터를 전송한다.
+  
+MulticastSocket
+  - 공용 IP를 통해 데이터를 전송할 수 있다.
+● receive(DatagramPacket)
+  - 포트를 통해 데이터가 전송될 때까지 대기하며, 데이터를 전송받으면 해당 데이터를 매개변수로 전달받은 DatagramPacket 객체에 저장한다.
+● send(DatagramPacket)
+  - 데이터와 전송받을 주소 정보를 담은 DatagramPacket 데이터를 해당 주소로 전송한다.
+● joinGroup(InetSocketAddress, NetworkInterface)
+  - 매개변수로 InetSocketAddress와 NetworkInterface 객체를 전달하면 
+  - InetSocketAddress 객체에는 InetAddress에 담긴 공용 IP 주소가 담겨 있다. InetAddress와 포트 번호를 전달해서 객체를 생성한다.
