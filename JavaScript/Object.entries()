@@ -1,0 +1,2 @@
+Object.entries(object)
+ - 매개변수로 전달된 객체{key1: value1, key2: value2, ... }를 [[key1, value1], [key2, value2] ... ]형태로 바꾼다.
