@@ -10,12 +10,14 @@ Data Definition Language(DDL)
   - create table tableA(fieldA, datatypeA(n), ConditionA, fieldB, datatypeB, ConditionB, ...) 형식으로, 테이블 구조를 새롭게 만들 수 있다.
   - Condition으로 not null을 전달하면 해당 필드는 null값이 허용되지 않는다.
   - Condition으로 default data를 전달하면, 해당 필드의 default값이 data로 설정되며, 데이터를 입력하지 않는 경우 default 값이 자동으로 입력된다.
+  - create user userA identified by pw 형태로 userA를 만들고 pw를 설정한다.
   
 ● drop
   - 데이터베이스 객체를 삭제한다.
   - drop table tableA 형태로 tableA를 삭제한다. 이 때, 쓰레기 값이 남는다.
   - drop table tableA purge 형태로 tableA를 쓰레기값을 포함하여 완전히 삭제한다.
   - purge recyclebin 명령으로 데이터베이스에 남아 있는 쓰레기 값을 삭제한다.
+  - drop user userA cascade 형식으로 userA의 계정 및 이에 저장된 데이터를 삭제한다.
 
 ● alter
   - 기존 데이터베이스를 재정의한다. 기존 테이블을 관리할 때 사용한다.
@@ -23,9 +25,19 @@ Data Definition Language(DDL)
   - alter table tableA add(fieldA datatypeA(n)) 형식으로 tableA의 마지막 필드로 fieldA를 새롭게 추가할 수 있다.
   - alter table tableA modify(fieldA datatypeA(n)) 형식으로 fieldA의 필드 구조(데이터 타입이나 크기)를 수정할 수 있다.
   - alter table tableA drop column fieldA 형식으로 fieldA를 테이블에서 제거할 수 있다.
+  - alter user userA account lock 형식으로 userA의 계정을 잠근다.
+  - alter user userA account unlock 형식으로 userA의 계정의 잠금을 해제한다..
   
 ● rename
   - 기존 테이블명을 변경한다.
   
 ● truncate
   - 테이블 또는 테이블의 지정된 파티션에서 모든 행을 제거한다.
+  
+● dba_users
+  - 데이터베이스에 등록된 계정들에 대한 정보가 담겨 있다.
+  
+● show user
+  - 현재 접속중인 계정의 ID를 확인한다.
+  
+
