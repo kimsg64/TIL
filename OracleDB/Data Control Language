@@ -3,6 +3,16 @@ Data Control Language(DCL)
   
 ● grant
   - 데이터베이스 사용자의 권한을 설정한다.
+  - grant create session to ID 형태로 해당 계정의 사용자에게 접속할 권한을 부여한다.
+  - grant create table to ID 형태로 해당 계정의 사용자에게 테이블을 만들 권한을 부여한다.
+  - grant role to ID 형태로 해당 계정의 사용자에게 특정한 Role을 부여한다.
+
+● role
+  - 권한을 한 번에 부여할 수 있도록 여러 권한을 묶어 놓은 것이다.
+  - connect role: create session
+  - resource role: create trigger + create cluster + create database link + create sequence + create procedure + create table + create operator
+  - dba role: 데이터를 관리하는 시스템 권한이다.
   
-● revokr
+● revoke
   - 데이터베이스 사용자의 권한을 회수한다.
+  - revoke role from ID 형태로 해당 계정으로부터 권한을 회수한다.
