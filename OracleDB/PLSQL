@@ -1,9 +1,9 @@
 PLSQL
   - SQL문으로 얻을 수 없는 절차적 언어(Procedual Language)의 기능을 사용할 수 있다.
+  - set serveroutput on 명령으로 serveroutput을 실행시켜야 하며, 프로그램이 종료될 때마다 serveroutput이 off되므로 on으로 전환해 주어야 한다.
   
 ● Anonymous Block
   - 익명의 블럭을 서버에 내장시켜 PL/SQL 엔진으로 전달하여 실행한다.
-  - set serveroutput on 명령으로 serveroutput을 실행시켜야 하며, 프로그램이 종료될 때마다 serveroutput이 off되므로 on으로 전환해 주어야 한다.
   - 아래와 같은 형식으로 변수의 선언(declare), 문장의 출력(dbms_output.put_line) 등이 가능하다.
     declare
         i_msg varchar(10);
@@ -20,16 +20,26 @@ PLSQL
 ● Procedure
   - 익명의 블럭과는 달리 컴파일까지 실행하기 때문에, 한 번 만들어 놓으면 계속 사용할 수 있다.
   - 매개변수를 사용하고 호출할 수 있는 Subprogram으로, 아래와 같은 형태로 emp_select라는 이름을 가진 프로시저를 만들 수 있다.
-    create or replace procedure emp_select(e_empno in emp.empno%type)
+    create or replace procedure emp_select(p_empno in emp.empno%type)
     is
-        p_empno emp.empno%type;
-        p_ename emp.ename%type;
-        p_sal emp.sal%type;
+        s_empno emp.empno%type;
+        s_ename emp.ename%type;
+        s_sal emp.sal%type;
     begin
-        select empno, ename, sal into p_empno, p_ename, p_sal from emp where empno=e_empno;
-        dbms_output.put_line(p_empno || ', ' || p_ename || ', ' ||  p_sal);
+        select empno, ename, sal into s_empno, s_ename, s_sal from emp where empno=p_empno;
+        
+        dbms_output.put_line(s_empno || ', ' || s_ename || ', ' ||  s_sal);
+        
+        exception
+          when error_type then
+            dbms_output.put_line('ERROR!');
     end;
-  - 매개변수로는 e_empno가 emp 테이블의 empno 필드와 같은 데이터 타입으로 전달될 것이다.
-  - is 부분에서는 변수를 선언하는데, p_empno emp.empno%type는 p_empno라는 이름의 변수는 emp 테이블의 empno 필드와 같은 데이터 타입으로 만든다는 의미를 갖는다.
-  - 이 프로시저는 매개변수로 전달된 e_empno를 empno로 갖는 사원의 empno, ename, sal을 각각 p_empno, p_ename, p_sal 변수에 할당하여 이를 출력할 수 있다.
-  - 아래와 같은 실행문을 통해 매개변수로 7900을 전달하면, empno가 7900인 사원의 empno, ename, sal이 출력된다.
+    execute emp_select(number);
+  - 매개변수로는 p_empno가 emp 테이블의 empno 필드와 같은 데이터 타입으로 전달될 것이다.
+  - is 부분에서는 변수를 선언하는데, s_empno emp.empno%type는 s_empno라는 이름의 변수는 emp 테이블의 empno 필드와 같은 데이터 타입으로 만든다는 의미를 갖는다.
+  - is 부분에서 변수가 많을 경우, rowtype을 이용해 한 번에 변수를 선언할 수 있다. rowtype은 여러 개의 데이터 타입을 담을 수 있는 배열과 같은 것으로, s_emp emp%rowtype 형태로 사용한다.
+  - dbms_output.put_line()를 통해 출력이 가능하다.
+  - 이 프로시저는 매개변수로 전달된 p_empno를 empno로 갖는 사원의 empno, ename, sal을 각각 s_empno, s_ename, s_sal 변수에 할당하여 이를 출력하는 기능을 저장하고 있다.
+  - exception을 선언하고, when error_type then statement를 입력함으로써 예외처리를 할 수 있다.
+  - execute로 시작하는 실행문을 통해 매개변수로 7900을 전달하면, empno가 7900인 사원의 empno, ename, sal이 출력된다.
+  
