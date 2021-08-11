@@ -1,0 +1,19 @@
+Using Procedure
+  - 자바에서 DB의 프로시저에 접근하여 데이터를 관리할 수 있다.
+  - Connection 클래스를 통해 DB에 연결한 뒤, prepareCall(sql) 메서드를 이용해 CallableStatement 객체를 얻는다.
+  - prepareCall의 매개변수인 sql문은 {"call procedure(?)"} 형태로, 프로시저의 실행문을 call하되, 매개변수는 "?"로 입력한다.
+  - CallableStatement 클래스는 DB의 프로시저에 접근할 수 있는 클래스이다.
+  - CallableStatement 객체의 in parameter에는, PreparedStatement와 동일하게 setString()이나 setInt() 등으로 매개변수를 전달할 수 있다.
+  - 실행 결과를 확인하기 위해, 프로시저에는 out parameter가 필요하며, CallableStatement 객체의 registerOutParameter(n, Types.) 메서드로 out Parameter를 반환받는다.
+  
+  ◎ 예시
+  create or replace procedure mem_insert(p_username in members.user_name%type, p_tel in members.user_contact%type, p_result out number)
+	is
+	begin
+	    p_result := 1;
+	    insert into members(user_no, user_name, user_contact, user_enrollment) 
+	    values(memSq.nextVal, p_username, p_tel, sysdate);
+	    exception
+	        when others then
+	            p_result := 0;
+	end;
