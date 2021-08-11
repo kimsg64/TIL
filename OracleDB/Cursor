@@ -1,0 +1,22 @@
+Cursor
+  - 여러 개의 레코드가 선택될 때, 각각의 레코드에 접근할 수 있다.
+  - 커서 정의 > 커서 열기 > fetch로 각각의 레코드에 접근 > 커서 종료
+  
+  ◎ 예시
+  create or replace procedure test_cursor(p_deptno emp.deptno%type)
+  is
+    cursor emp_data is SELECT empno, ename, job, sal from emp where deptno=p_deptno;
+    p_empno emp.empno%type;
+    p_ename emp.ename%type;
+    p_job emp.job%type;
+    p_sal emp.sal%type;
+  begin
+    open emp_data;
+    loop
+        fetch emp_data into p_empno, p_ename, p_job, p_sal;
+        exit when emp_data%NOTFOUND;
+        dbms_output.put_line(p_empno||', '||p_ename||', '||p_job||', '||p_sal);
+    end loop;
+    close emp_data;
+  end;
+  - 위와 같은 형태로 커서를 만들 수 있다.
