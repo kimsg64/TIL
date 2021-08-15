@@ -1,0 +1,8 @@
+<map> </map>
+  - 이미지의 특정 부분에만 링크를 걸 수 있다.
+  
+● <area> </area>
+  - map 태그 안에서 특정 주소로 링크를 걸 수 있다.
+  - shape 속성으로 rect, circle, poly를 입력할 수 있다.
+  - coords 속성으로 shape 속성에 맞게 좌표값을 전달할 수 있는데, shpae="rect"인 경우에는 좌측 상단, 우측 하단의 x, y 좌표를, shape="circle"인 경우에는 원의 중심의 x, y 좌표와 반지름의 길이를, shape="poly"인 경우에는 다각형의 꼭짓점의 x, y 좌표를 시계 방향으로 전달하면 된다.
+ 
