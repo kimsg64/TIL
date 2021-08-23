@@ -2,8 +2,10 @@ jQuery
  - HTML의 사이드 조작을 단순화하도록 설계된 JavaScript Library이다.
  - jQuery 객체로 생성된다.
  - jQuery 파일을 다운받거나, CDN의 URL을 script 태그의 src 속성에 연결함으로써 이용할 수 있다.
+ - document.ready 이벤트에 의해서, HTML, CSS, JS가 모두 실행된 뒤에 JQeury가 실행된다.
  - $ 기호를 통해 jQuery에 접근할 수 있다.
- - $("CSS Selector").function(); 형식으로 사용할 수 있다.
+ - $(document).ready((function(){}); 형식을 사용할 수 있다.
+ - $("CSS Selector").function(); 형식으로 보다 간략하게 사용할 수 있다.
 
 ● CDN(Content Delivery Network)
  - jQuery.com CDN
@@ -16,3 +18,16 @@ jQuery
     https://cdnjs.com/libraries/
  - jsDelivr CDN
     https://www.jsdelivr.com/
+    
+● Selector
+ - CSS 선택자로는 전체(*), 태그, 아이디(#), 클래스(.), 자식(>), 자손( ) 등이 있다.
+ - $(Selector1).children(Selector2): Selector1으로 선택된 객체의 자식을 선택한다. Selector2를 전달하는 경우 Selector1으로 선택된 객체의 자식 중에서 Selector2로 선택한다.
+ - $(Selector).next(): Selector로 선택된 객체의 다음 객체를 선택한다.
+ - $(Selector).prev(): Selector로 선택된 객체의 이전 객체를 선택한다.
+ - $(Selector).parent(): Selector로 선택된 객체의 부모 객체를 선택한다.
+ - $(Selector).siblings(): Selector로 선택된 객체의 형제 객체를 선택한다.
+ 
+● function
+ - $(Selector).css("attribute", "value"): Selector로 선택된 객체에 style attribute: value;를 부여한다.
+ - $(Selector).attr("attribute", "value"): Selector로 선택된 객체에 attribute: value;를 부여한다.
+ - $(Selector).prop("property", "boolean"): Selector로 선택된 객체에 property: boolean;을 부여한다.
