@@ -1,0 +1,3 @@
+document
+  - 브라우저가 불러온 웹 페이지를 의미한다.
+  - write(markup): document에 markup을 포함한 텍스트를 적는다.
